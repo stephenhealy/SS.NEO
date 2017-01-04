@@ -1,0 +1,311 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_Masters/Top.Master" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Presentation.Web._Masters.Site" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"/>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div id="wrapper">
+        <header class="navbar" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand navbar-brand-img logo" href="<%= RelativePath%>/">
+                        <img alt="NEO Sports Plant" src="<%= RelativePath%>/img/logo.png" style="width: 200px; height: 50px" />
+                    </a>
+                     <a class="navbar-brand navbar-brand-img logo-sm" href="<%= RelativePath%>/">
+                         <img alt="NEO Sports Plant" src="<%= RelativePath%>/img/logoSmall.png" style="width: 50px; height: 50px" />
+                     </a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i></button>
+                </div><!-- /.navbar-header -->
+                <nav class="collapse navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav navbar-right mainnav-menu">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">Volleyball <i class="fa fa-caret-down navbar-caret"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" href="javascript:void;">
+                                        <i class="fa fa-angle-double-right dropdown-icon "></i> 
+                                        Indoor
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="<%= RelativePath%>/Volleyball/Indoor/Leagues/">
+                                                Leagues
+                                            </a>
+                                        </li> 
+                                        <li>
+                                            <a href="<%= RelativePath%>/Volleyball/Indoor/Tournaments/">
+                                                Tournaments
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" href="javascript:void;">
+                                        <i class="fa fa-angle-double-right dropdown-icon "></i> 
+                                        Indoor Sand
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="<%= RelativePath%>/Volleyball/IndoorSand/Leagues/">
+                                                Leagues
+                                            </a>
+                                        </li> 
+                                        <li>
+                                            <a href="<%= RelativePath%>/Volleyball/IndoorSand/Tournaments/">
+                                                Tournaments
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Volleyball/Clinics/"><i class="fa fa-angle-double-right dropdown-icon"></i> Clinics / Camps</a>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Volleyball/Lessons/"><i class="fa fa-angle-double-right dropdown-icon"></i> Lessons</a>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Volleyball/NEOVC/"><i class="fa fa-angle-double-right dropdown-icon"></i> NEOVC</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">Sports <i class="fa fa-caret-down navbar-caret"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" href="javascript:void;">
+                                        <i class="fa fa-angle-double-right dropdown-icon "></i> 
+                                        Basketball
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="<%= RelativePath%>/Basketball/Leagues/">
+                                                Leagues
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<%= RelativePath%>/Basketball/Tournaments/">
+                                                Tournaments
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<%= RelativePath%>/Basketball/Clinics/">
+                                                Clinics / Camps
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<%= RelativePath%>/Basketball/Lessons/">
+                                                Lessons
+                                            </a>
+                                        </li>
+                                        <li style="display: none">
+                                            <a href="<%= RelativePath%>/Basketball/Youth/">
+                                                Youth
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Soccer/"><i class="fa fa-angle-double-right dropdown-icon"></i> Soccer</a>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" href="javascript:void;">
+                                        <i class="fa fa-angle-double-right dropdown-icon "></i> 
+                                        Baseball
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="<%= RelativePath%>/Baseball/">
+                                                Overview
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<%= RelativePath%>/Baseball/Clinics/">
+                                                Clinics / Camps
+                                            </a>
+                                        </li> 
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" href="javascript:void;">
+                                        <i class="fa fa-angle-double-right dropdown-icon "></i> 
+                                        Bocce
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="<%= RelativePath%>/Bocce/">
+                                                Overview
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<%= RelativePath%>/Bocce/Leagues/">
+                                                Leagues
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<%= RelativePath%>/Bocce/Tournaments/">
+                                                Tournaments
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">Events <i class="fa fa-caret-down navbar-caret"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="<%= RelativePath%>/Events/"><i class="fa fa-angle-double-right dropdown-icon"></i> Upcoming & Recent</a>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Events/Host/"><i class="fa fa-angle-double-right dropdown-icon"></i> Host an Event</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="<%= RelativePath%>/Gallery/">Photos</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">Facility <i class="fa fa-caret-down navbar-caret"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="<%= RelativePath%>/Facility/Rental/"><i class="fa fa-angle-double-right dropdown-icon"></i> Court Rental</a>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Facility/Training/"><i class="fa fa-angle-double-right dropdown-icon"></i> Training</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">Company <i class="fa fa-caret-down navbar-caret"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="<%= RelativePath%>/Company/About/"><i class="fa fa-angle-double-right dropdown-icon"></i> About Us</a>
+                                </li>
+                                <li style="display: none">
+                                    <a href="<%= RelativePath%>/Company/Staff/"><i class="fa fa-angle-double-right dropdown-icon"></i> Our Staff</a>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Company/Sponsors/"><i class="fa fa-angle-double-right dropdown-icon"></i> Our Sponsors</a>
+                                </li>
+                                <li style="display: none">
+                                    <a href="<%= RelativePath%>/Company/Testimonials/"><i class="fa fa-angle-double-right dropdown-icon"></i> Testimonials</a>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Company/Contact/"><i class="fa fa-angle-double-right dropdown-icon"></i> Contact Us</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div><!-- /.container -->
+        </header>
+        <div class="masthead">
+            <asp:Panel ID="panAlert" runat="server" role="alert" CssClass="alert alert-danger" Visible="false">
+                <h4><em class="fa fa-paperclip fa-lg"></em> Important Announcement</h4>
+<%--                <strong><%= Models.Statics.DateTimeToString(Models.Statics.DateTimeUTC(), Models.ParseDateTimeType.LongDate) %></strong>--%>
+                <asp:Literal ID="litAlert" runat="server" />
+            </asp:Panel>
+            <asp:ContentPlaceHolder ID="BannerContent" runat="server"/>
+        </div>
+        <!-- /.masthead -->
+        <asp:ContentPlaceHolder ID="BeforeContent" runat="server"/>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <asp:ContentPlaceHolder ID="AfterContent" runat="server"/>
+        <!-- /.content -->
+    </div><!-- /#wrapper -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="heading-block">
+                        <h4>Keep In Touch</h4>
+                    </div><!-- /.heading-block -->
+                    <ul class="icons-list">
+                        <li><i class="icon-li fa fa-home"></i> 20001 Euclid Ave<br>
+                        Cleveland, OH 44117</li>
+                        <li><i class="icon-li fa fa-phone"></i> <%= Models.Statics.FormatPhone("2164659942") %></li>
+                        <li>
+                            <i class="icon-li fa fa-envelope"></i> <a href="mailto:info@neosportsplant.com">info@neosportsplant.com</a>
+                        </li>
+                        <li>
+                            <i class="icon-li fa fa-map-marker"></i> <a href="https://maps.google.com/?q=20001+Euclid+Ave,+Cleveland,+OH,+44117" target="_blank">View Map</a>
+                        </li>
+                    </ul>
+                </div><!-- /.col -->
+                <div class="col-sm-4">
+                    <div class="heading-block">
+                        <h4>Connect With Us</h4>
+                    </div><!-- /.heading-block -->
+                    <ul class="icons-list">
+                        <li>
+                            <i class="icon-li fa fa-facebook"></i> <a href="https://www.facebook.com/NEOSportsPlant" target="_blank">Facebook</a>
+                        </li>
+                        <li>
+                            <i class="icon-li fa fa-twitter"></i> <a href="https://twitter.com/neosportsplant" target="_blank">Twitter</a>
+                        </li>
+                        <li>
+                            <i class="icon-li fa fa-instagram"></i> <a href="https://www.instagram.com/neosportsplant" target="_blank">Instagram</a>
+                        </li>
+                        <li style="display: none">
+                            <i class="icon-li fa fa-google-plus"></i> <a href="javascript:;">Google Plus</a>
+                        </li>
+                    </ul>
+                </div><!-- /.col -->
+                <div class="col-sm-4">
+                    <div class="heading-block">
+                        <h4>Stay Updated</h4>
+                    </div><!-- /.heading-block -->
+                    <p>Get email alerts about new leagues &amp; tournaments.</p>
+                    <div class="form-group">
+                        <asp:LinkButton ID="btnModal" runat="server" CssClass="btn btn-primary" Text="Subscribe" OnClientClick="return Subscribe()" />
+                    </div><!-- /.form-group -->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </footer>
+    <footer class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>
+                        Site Designed and Hosted by <a href="http://www.sitesteam.com" target="_blank">SiteSteam, LLC</a>. Copyright &copy; <%= DateTime.Now.Year.ToString() %>
+                        <span style="float: right"><a href="http://cms.neosportsplant.com" target="_blank"><i class="fa fa-pencil-square-o"></i></a></span>
+                    </p>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div>
+    </footer>
+    <!-- MODAL -->
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+    <asp:UpdatePanel ID="updSubscribe" runat="server">
+        <ContentTemplate>
+            <div class="modal modal-styled fade" id="subscription">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+                            <h4 class="modal-title">Subscribe</h4>
+                        </div><!-- /.modal-header -->
+                        <div class="modal-body">
+                            <iframe src="<%= RelativePath %>/icontact.html" style="zoom:0.60" frameborder="0" scrolling="auto" height="450" width="99.6%"></iframe>
+                        </div><!-- /.modal-body -->
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        </ContentTemplate>
+    </asp:UpdatePanel>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ScriptContent" runat="server">
+    <script>
+        function Subscribe() {
+            $("#subscription").modal();
+            return false;
+        }
+        //function ShowModal() {
+        //    $(".modal-backdrop").remove();
+        //    $("#subscription").modal('show');
+        //}
+    </script>
+    <asp:ContentPlaceHolder ID="ScriptContent" runat="server"/>
+</asp:Content>

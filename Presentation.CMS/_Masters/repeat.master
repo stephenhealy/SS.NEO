@@ -1,0 +1,359 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_Masters/landing.master" AutoEventWireup="true" CodeBehind="repeat.master.cs" Inherits="Presentation.CMS._Masters.repeat" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+        <asp:PlaceHolder ID="hdList" runat="server" Visible="false">
+       <!-- DATATABLES-->
+       <link rel="stylesheet" href="<%= master.RelativePath %>/vendor/datatables-colvis/css/dataTables.colVis.css">
+       <link rel="stylesheet" href="<%= master.RelativePath %>/vendor/datatable-bootstrap/css/dataTables.bootstrap.css">
+    </asp:PlaceHolder>
+    <asp:PlaceHolder ID="hdEdit" runat="server" Visible="false">
+      <link rel="stylesheet" href="<%= master.RelativePath %>/vendor/select2/select2.css">
+      <link rel="stylesheet" href="<%= master.RelativePath %>/vendor/select2-bootstrap-theme/dist/select2-bootstrap.min.css">
+      <link rel="stylesheet" href="<%= master.RelativePath %>/vendor/bootstrap-3-timepicker/css/bootstrap-timepicker.css">
+      <link rel="stylesheet" href="<%= master.RelativePath %>/vendor/bootstrap-datepicker/css/datepicker3.css">
+    </asp:PlaceHolder>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="TitleContent" runat="server">
+    <asp:Literal ID="litHeading" runat="server" />&nbsp;
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Buttons" runat="server">
+    <asp:LinkButton ID="btnAdd" runat="server" CssClass="btn btn-primary wait" Visible="false" Text="<em class='fa fa-plus'></em> Add New" OnClick="btnAdd_Click" /> 
+    <asp:Panel ID="panSave" runat="server" Visible="false" CssClass="btn-group">
+        <asp:LinkButton ID="btnSave" runat="server" CssClass="btn btn-primary" Text="<em class='fa fa-check'></em> Save" OnClick="btnSave_Click" OnClientClick="return DoValidation('valSave',this);" />
+        <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">
+            <span class="caret"></span>
+            <span class="sr-only">primary</span>
+        </button>
+        <ul role="menu" class="dropdown-menu">
+            <li><asp:LinkButton ID="btnSaveReturn" runat="server" Text="Save & Return" OnClick="btnSaveReturn_Click" OnClientClick="return DoValidation('valSave',this);" /></li>
+            <li><asp:LinkButton ID="btnSaveNew" runat="server" Text="Save & Add New" OnClick="btnSaveNew_Click" OnClientClick="return DoValidation('valSave',this);" /></li>
+        </ul>
+    </asp:Panel>
+    <asp:ContentPlaceHolder ID="Buttons" runat="server" />
+    <asp:LinkButton ID="btnRestore" runat="server" CssClass="btn btn-primary wait" Visible="false" Text="<em class='fa fa-undo'></em> Restore" OnClick="btnRestore_Click" /> 
+    <asp:LinkButton ID="btnPurge" runat="server" CssClass="btn btn-primary" Visible="false" Text="<em class='fa fa-trash'></em> Purge" OnClick="btnPurge_Click" OnClientClick="return Confirm(this, 'WARNING: These records will be permanently deleted from the database. This action cannot be undone!');" /> 
+    <asp:HyperLink ID="hypOrder" runat="server" CssClass="btn btn-primary" Visible="false" Text="<em class='fa fa-sort'></em> Order" NavigateUrl="javascript:void(0);" /> 
+    <asp:HyperLink ID="hypHistory" runat="server" CssClass="btn btn-primary" Visible="false" Text="<em class='fa fa-history'></em> History" NavigateUrl="javascript:void(0);" /> 
+    <asp:LinkButton ID="btnTrash" runat="server" CssClass="btn btn-primary wait" Visible="false" Text="<em class='fa fa-trash'></em> Trash" OnClick="btnTrash_Click" /> 
+    <asp:LinkButton ID="btnDelete" runat="server" CssClass="btn btn-primary" Visible="false" Text="<em class='fa fa-trash'></em> Delete" OnClick="btnDelete_Click" OnClientClick="return Confirm(this, 'Are you sure you want to delete this item?');" /> 
+    <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-primary wait" Visible="false" Text="<em class='fa fa-times'></em> Cancel" OnClick="btnCancel_Click" /> 
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:Panel ID="panError" runat="server" role="alert" CssClass="alert alert-danger" Visible="false">
+        <h3>Oops! The following error occurred :</h3> <asp:Literal ID="litError" runat="server" />
+    </asp:Panel>
+    <asp:Panel ID="panSaved" runat="server" role="alert" CssClass="alert alert-success alert-hide" Visible="false">
+        <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+        <strong>Done!</strong> You successfully saved this information.
+    </asp:Panel>
+    <asp:Panel ID="panDeleted" runat="server" role="alert" CssClass="alert alert-warning" Visible="false">
+        <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+        <strong>Deleted!</strong> Remember, you can always restore this item by going to the <a href='<%= Request.Path + "?trash=true" %>' style="color: #FFF; text-decoration: underline">trash</a>.
+    </asp:Panel>
+    <asp:PlaceHolder ID="divTable" runat="server" Visible="false">
+        <asp:PlaceHolder ID="phTree" runat="server" Visible="false">
+            <div class="col-sm-2 col-md-3">
+                <div class="panel panel-default">
+                     <div class="panel-heading">Select from the following:</div>
+                     <div class="panel-body">
+                        <asp:TreeView ID="treTree" CssClass="treeview" runat="server" ShowExpandCollapse="true" ExpandImageUrl="~/img/spacer.png" CollapseImageUrl="~/img/spacer.png" NodeIndent="0">
+                            <LeafNodeStyle CssClass="leaf" />
+                            <NodeStyle CssClass="node" />
+                        </asp:TreeView>
+                     </div>
+                  </div>
+            </div>
+            <div class="col-sm-10 col-md-9 table-responsive b0">
+        </asp:PlaceHolder>
+        <asp:PlaceHolder ID="phTable" runat="server" Visible="false">
+            <div class="col-sm-12 table-responsive b0">
+        </asp:PlaceHolder>
+                <table class='table table-striped table-hover' id="datatable1">
+                    <thead>
+                        <asp:PlaceHolder ID="phList" runat="server" Visible="false">
+                            <script>
+                                var varColumns = [
+                                     { mData: 'AssetID' },
+                                     { mData: 'Name' },
+                                     { mData: 'Enabled' },
+                                     { mData: 'ModifiedBy' },
+                                     { mData: 'ModifiedOn' }
+                                ];
+                            </script>
+                            <tr>
+                                <th style="width:0px"></th>
+                                <th data-filterable="text">
+                                    Name
+                                </th>
+                                <asp:ContentPlaceHolder ID="Parent" runat="server" />
+                                <th style="width:80px" class="text-center repeat-status">
+                                    Status
+                                </th>
+                                <th id="ModifiedBy" style="width:150px">
+                                    Modified By
+                                </th>
+                                <th id="ModifiedOn" style="width:150px">
+                                    Modified On
+                                </th>
+                            </tr>
+                        </asp:PlaceHolder>
+                        <asp:PlaceHolder ID="phDeleted" runat="server" Visible="false">
+                            <script>
+                                var varColumns = [
+                                     { mData: 'AssetID' },
+                                     { mData: 'Name' },
+                                     { mData: 'AssetID' },
+                                     { mData: 'ModifiedBy' },
+                                     { mData: 'ModifiedOn' }
+                                ];
+                            </script>
+                            <tr>
+                                <th style="width:50px">
+                                    Select
+                                </th>
+                                <th>
+                                    Name
+                                </th>
+                                <th style="width:80px" class="text-center repeat-status">
+                                </th>
+                                <th style="width:150px">
+                                    Deleted By
+                                </th>
+                                <th style="width:135px">
+                                    Deleted On
+                                </th>
+                            </tr>
+                        </asp:PlaceHolder>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </asp:PlaceHolder>
+    <asp:Panel ID="divEdit" runat="server" Visible="false" class="form-horizontal demo-icheck">
+        <asp:Panel ID="panReadOnly" runat="server" role="alert" CssClass="alert alert-danger" Visible="false">
+            <strong>Read Only :</strong> This record cannot be updated because it is in a deleted state.
+        </asp:Panel>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Asset ID</label>
+            <div class="col-sm-2" data-toggle="tooltip" data-placement="right" data-original-title="The unique ID of is record. The AssetID is generated by the system.">
+                <p class="form-control-static">
+                    <asp:Literal ID="litAssetID" runat="server" Text="<small><em>Not assigned</em></small>" />
+                </p>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="Edit" runat="server" />
+        <asp:Label ID="lblParentID" runat="server" Visible="false" />
+    </asp:Panel>
+    <asp:HiddenField ID="TrashRecords" runat="server" />
+    <asp:ValidationSummary id="sumSave" HeaderText="The following errors were found:" ShowMessageBox="false" ShowSummary="false" DisplayMode="BulletList" runat="server" ValidationGroup="valSave" />
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="ScriptContent" runat="server">
+    <asp:PlaceHolder ID="ftTable" runat="server" Visible="false">
+       <!-- DATATABLES-->
+       <script src="<%= master.RelativePath %>/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
+       <script src="<%= master.RelativePath %>/vendor/datatables-colvis/js/dataTables.colVis.js"></script>
+       <script src="<%= master.RelativePath %>/vendor/datatable-bootstrap/js/dataTables.bootstrap.js"></script>
+       <script src="<%= master.RelativePath %>/vendor/datatable-bootstrap/js/dataTables.bootstrapPagination.js"></script>
+       <script>
+           var oDataTable = null;
+           arrLoad.push(new CodeBlock(function () {
+               if ('<%= TreeLevel > 0 && Trash == false %>' == 'True') {
+                   if ('<%= String.IsNullOrEmpty(Request.QueryString["Back"]) %>' == 'True') {
+                       oDataTable = $('#datatable1').dataTable({
+                           "language": {
+                               "lengthMenu": "",
+                               "zeroRecords": "Make a choice from the <strong>options</strong> to the left to filter the results.",
+                               "infoEmpty": ""
+                           }
+                       });
+                       $(".treeview table td a.leaf").on('click', function () {
+                           $(".treeview table td a.leaf").removeClass("active");
+                           $(this).addClass("active");
+                       });
+                   }
+                   else
+                       LoadRecords("&parent=<%= Request.QueryString["Back"] %>");
+               }
+               else
+                   LoadRecords("");
+
+               LoadFolders();
+           }));
+           function LoadFolders() {
+               $(".node a").click(function (e) {
+                   var folder = $(this).find("i.folder");
+                   if (folder.length) {
+                       if (folder.hasClass("fa-folder-open-o"))
+                           folder.removeClass('fa-folder-open-o').addClass('fa-folder-o');
+                       else
+                           folder.removeClass('fa-folder-o').addClass('fa-folder-open-o');
+                   }
+               })
+           }
+           function SelectTreeItem(ID) {
+               LoadRecords("&parent=" + ID);
+           }
+           function LoadRecords(query) {
+               var index = 0;
+               try {
+                   ParentColumn();   // Required to be put in the <footer> section for those with a Parent Column
+                   varColumns = [
+                     { mData: 'AssetID' },
+                     { mData: 'Name' },
+                     { mData: 'Parent' },
+                     { mData: 'Enabled' },
+                     { mData: 'ModifiedBy' },
+                     { mData: 'ModifiedOn' }
+                   ];
+                   index = 1;
+               } catch (ex) {// doesn't exist
+               }
+               if (oDataTable != null) {
+                   oDataTable.fnDestroy();
+               }
+               try {
+                   oDataTable = $('#datatable1').dataTable({
+                       "language": {
+                           "lengthMenu": "",
+                           "zeroRecords": "Make a choice from the <strong>Navigation Tree</strong> option to the left",
+                           "infoEmpty": "No records"
+                       },
+                       'paging': true,  // Table pagination
+                       'ordering': true,  // Column ordering 
+                       'info': true,  // Bottom left status text
+                       oLanguage: {
+                           sLoadingRecords: '<h4 style="text-align: center">Retrieving data from database...</h4><div class="loader-demo"><div class="ball-pulse-sync"><div></div><div></div><div></div></div></div>'
+                       },
+                       sAjaxSource: '<%=Request.Path + "?JSON=true" + (this.Trash ? "&trash=true" : "")%>' + query,
+                       aoColumns: varColumns,
+                       //"order": [1, 'asc'],
+                       "columnDefs": [{
+                           "targets": 0,
+                           "orderable": false,
+                           "render": function (data, type, full, meta) {
+                               if (full.Deleted)
+                                   return '<div class="checkbox"><label><input type="checkbox" class="trash-check" data-value="' + full.AssetID + '" onclick="TrashRecords();"><span class="text"></span></label>';
+                               else
+                                   return '';
+                           }
+                       },
+                       {
+                           "targets": 1,
+                           "data": "Name",
+                           "render": function (data, type, full, meta) {
+                               if (full.Deleted)
+                                   return data;
+                               else
+                                   return '<a onclick="ShowWait();" href="?ID=' + full.AssetID + '">' + data + '</a>';
+                           }
+                       },
+                       {
+                           "targets": (index + 2),
+                           "data": "Enabled",
+                           className: "text-center repeat-status",
+                           "render": function (data, type, full, meta) {
+                               if (full.Deleted)
+                                   return '';
+                               else if (full.Enabled)
+                                   //return '<label class="switch switch-sm"><input checked="checked" type="checkbox" onclick="Enable(' + full.AssetID + ');"><span></span></label>';
+                                   return '<span class="label label-success">Enabled</span>';
+                               else
+                                   //return '<label class="switch switch-sm"><input type="checkbox" onclick="Enable(' + full.AssetID + ');"><span></span></label>';
+                                   return '<span class="label label-danger">Disabled</span>';
+                           },
+                       },
+                       {
+                           "targets": (index + 4),
+                           "data": "ModifiedOn",
+                           "render": function (data, type, full, meta) {
+                               var date = new Date(parseInt(data.substr(6)));
+                               if (date.getFullYear() > 2000) {
+                                   //alert(date.getTimezoneOffset());
+                                   // obtain local UTC offset and convert to msec
+                                   var localOffset = date.getTimezoneOffset() * 60000;
+                                   date = new Date(date.getTime() - localOffset);
+                                   var curr_month = date.getMonth() + 1; //Months are zero based
+                                   var curr_hours = date.getHours();
+                                   var AmPm = "AM";
+                                   if (curr_hours > 12) {
+                                       curr_hours = curr_hours - 12;
+                                       AmPm = "PM";
+                                   }
+                                   var curr_minutes = "0";
+                                   if (date.getMinutes() < 10)
+                                       curr_minutes += date.getMinutes().toString();
+                                   else
+                                       curr_minutes = date.getMinutes().toString();
+                                   return curr_month + "/" + date.getDate() + "/" + date.getFullYear() + " " + curr_hours + ":" + curr_minutes + " " + AmPm;
+                               }
+                               else
+                                   return "Never";
+                           }
+                       }
+                       ]
+                   });
+               }
+               catch (ex) {
+                   alert(ex);
+               }
+           }
+           function TrashRecords() {
+               $('#<%=TrashRecords.ClientID%>').val(   // set hidden field value
+                $('.trash-check:checked').map(function () {  // with an array whose elements are joined into a delimited string
+                    return $(this).attr("data-value");         // get value of the HTML in the next TD
+                }).get().join(','));
+               //alert($('#<%=TrashRecords.ClientID%>').val());
+           }
+       </script>
+    </asp:PlaceHolder>
+    <asp:PlaceHolder ID="ftEdit" runat="server" Visible="false">
+        <script src="<%= master.RelativePath %>/vendor/select2/select2.js"></script>
+        <script src="<%= master.RelativePath %>/js/sticky.js"></script>
+        <script>
+            arrLoad.push(new CodeBlock(function () {
+                // Load browser(s)
+                $('.browse-image').on('click', function () {
+                    var cont = $(this).data("control");
+                    LoadModal('mainModal', RelativePath + '/_Modals/Browse.aspx?i=' + cont + '&v=' + $("#" + cont).val(), "Browse Image");
+                    return false;
+                });
+                $('.browse-link').on('click', function () {
+                    var cont = $(this).data("control");
+                    LoadModal('mainModal', RelativePath + '/_Modals/Browse.aspx?l=' + cont + '&v=' + $("#" + cont).val(), "Browse Link");
+                    return false;
+                });
+                $('.browse-file').on('click', function () {
+                    var cont = $(this).data("control");
+                    LoadModal('mainModal', RelativePath + '/_Modals/Browse.aspx?f=' + cont + '&v=' + $("#" + cont).val(), "Browse File");
+                    return false;
+                });
+
+                // Stick the filter to side.
+                $('#button-wrapper').scrollToFixed({
+                    marginTop: 10,
+                    preFixed: function () { $(this).css({ 'background-color': '#FFFFFF', "width": "600px" }); }
+                });
+
+                $(".select-basic-single").select2({
+                    placeholder: 'Select a State',
+                    allowClear: true,
+                    theme: 'bootstrap'
+                });
+
+                $('.date').datepicker({
+                    autoclose: true,
+                    todayHighlight: true
+                });
+
+                $('.phone').mask("(999) 999-9999");
+
+            }));
+        </script>
+        <script src="<%= master.RelativePath %>/vendor/bootstrap-3-timepicker/js/bootstrap-timepicker.js"></script>
+        <script src="<%= master.RelativePath %>/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="<%= master.RelativePath %>/vendor/maskedinput/jquery.maskedinput.min.js"></script>
+    </asp:PlaceHolder>
+    <asp:ContentPlaceHolder ID="ScriptContent" runat="server" />
+</asp:Content>

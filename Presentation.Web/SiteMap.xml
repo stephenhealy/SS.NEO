@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+    ********************************************************************************************
+    Site Map Config File
+    ********************************************************************************************
+        A couple of rules:
+            1.) The "path" must always start with a "/" (unless it's the home page)
+            2.) The "path" must never end with a "/"
+            
+            path:         The site relative path to the page (case in-sensitive)
+            title:        Appears in the title section of the browser window.
+            meta:         Content to be added into the <meta> tag.
+                          Examples include:
+                              description
+                              keywords
+                              author
+            page:         One or more child pages.
+    ********************************************************************************************
+  -->
+<data>
+  <page>
+    <!-- HOME PAGE -->
+    <path></path>
+    <title>Home Page</title>
+    <meta>
+      <description>description</description>
+      <keywords>keywords</keywords>
+    </meta>
+    <!-- VOLLEYBALL -->
+    <page>
+      <path>/Volleyball/Lessons</path>
+      <title>Volleyball Lessons</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <page>
+      <path>/Volleyball/Youth</path>
+      <title>Youth Volleyball Programs</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <page>
+      <path>/Volleyball/Indoor/Leagues</path>
+      <title>Indoor Volleyball Leagues</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <page>
+      <path>/Volleyball/Indoor/Tournaments</path>
+      <title>Indoor Volleyball Tournaments</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <page>
+      <path>/Volleyball/IndoorSand/Leagues</path>
+      <title>Indoor Sand Volleyball Leagues</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <page>
+      <path>/Volleyball/IndoorSand/Tournaments</path>
+      <title>Indoor Sand Volleyball Tournaments</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <!-- BASKETBALL -->
+    <page>
+      <path>/Basketball/Clinics</path>
+      <title>Basketball Camps &amp; Clinics</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <page>
+      <path>/Basketball/Lessons</path>
+      <title>Basketball Lessons</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <page>
+      <path>/Basketball/Youth</path>
+      <title>Youth Basketball Programs</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <page>
+      <path>/Basketball/Leagues</path>
+      <title>Indoor Basketball Leagues</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <page>
+      <path>/Basketball/Tournaments</path>
+      <title>Indoor Basketball Tournaments</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <!-- EVENTS -->
+    <page>
+      <path>/Events</path>
+      <title>Recent &amp; Upcoming Events</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+      <page>
+        <path>/Events/Host</path>
+        <title>Host an Event</title>
+        <meta>
+          <description>description</description>
+          <keywords>keywords</keywords>
+        </meta>
+      </page>
+    </page>
+    <!-- PHOTOS -->
+    <page>
+      <path>/Gallery</path>
+      <title>Gallery</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <!-- FACILITY -->
+    <page>
+      <path>/Facility/Rental</path>
+      <title>Facility Rental</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <page>
+      <path>/Facility/Training</path>
+      <title>Training</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <!-- COMPANY -->
+    <page>
+      <path>/Company/About</path>
+      <title>About Us</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <page>
+      <path>/Company/Contact</path>
+      <title>Contact Us</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <page>
+      <path>/Company/Sponsors</path>
+      <title>Our Sponsors</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <page>
+      <path>/Company/Testimonials</path>
+      <title>Testimonials</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <page>
+      <path>/Company/Staff</path>
+      <title>Our Staff</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+    </page>
+    <!-- PLAYERS CONNECTION -->
+    <page>
+      <path>/Players</path>
+      <title>Welcome to the Players Connection</title>
+      <meta>
+        <description>description</description>
+        <keywords>keywords</keywords>
+      </meta>
+      <page>
+        <path>/Players/Forgot</path>
+        <title>Forgot Password</title>
+        <meta>
+          <description>description</description>
+          <keywords>keywords</keywords>
+        </meta>
+      </page>
+      <page>
+        <path>/Players/Password</path>
+        <title>Change Password</title>
+        <meta>
+          <description>description</description>
+          <keywords>keywords</keywords>
+        </meta>
+      </page>
+      <page>
+        <path>/Players/Profile</path>
+        <title>My Profile</title>
+        <meta>
+          <description>description</description>
+          <keywords>keywords</keywords>
+        </meta>
+      </page>
+      <page>
+        <path>/Players/SeekingPlayer</path>
+        <title>Team Seeking a Player</title>
+        <meta>
+          <description>description</description>
+          <keywords>keywords</keywords>
+        </meta>
+      </page>
+      <page>
+        <path>/Players/SeekingPlayers</path>
+        <title>Teams Seeking Players</title>
+        <meta>
+          <description>description</description>
+          <keywords>keywords</keywords>
+        </meta>
+      </page>
+      <page>
+        <path>/Players/SeekingTeam</path>
+        <title>Player Seeking a Team</title>
+        <meta>
+          <description>description</description>
+          <keywords>keywords</keywords>
+        </meta>
+      </page>
+      <page>
+        <path>/Players/SeekingTeams</path>
+        <title>Players Seeking Teams</title>
+        <meta>
+          <description>description</description>
+          <keywords>keywords</keywords>
+        </meta>
+      </page>
+    </page>
+  </page>
+</data>

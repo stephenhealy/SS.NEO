@@ -1,0 +1,16 @@
+form {
+    height: 100%;
+}
+.navbar,
+.footer {
+    background-color: #222;
+}
+.navbar .navbar-brand {
+    padding: 10px 0px;
+}
+    .navbar .navbar-brand-img img {
+        height: 35px;
+    }
+.navbar-nav > li > .dropdown-menu {
+    z-index: 1002;
+}

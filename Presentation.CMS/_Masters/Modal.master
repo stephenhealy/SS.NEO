@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_Masters/Top.Master" AutoEventWireup="true" CodeBehind="Modal.master.cs" Inherits="Presentation.CMS._Masters.Modal" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div id="accordion" role="tablist" aria-multiselectable="true" class="panel-group">
+        <div class="panel panel-default">
+            <div id="headingOne" role="tab" class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Input Data</a>
+                </h4>
+            </div>
+            <div id="collapseOne" role="tabpanel" aria-labelledby="headingOne" class="panel-collapse collapse in">
+                <div class="panel-body" style="word-wrap: break-word"><asp:Literal ID="litInput" runat="server" /></div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div id="headingTwo" role="tab" class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="collapsed">Output Data</a>
+                </h4>
+            </div>
+            <div id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" class="panel-collapse collapse">
+                <div class="panel-body" style="word-wrap: break-word"><asp:Literal ID="litOutput" runat="server" /></div>
+            </div>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Modal" runat="server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ScriptContent" runat="server">
+</asp:Content>

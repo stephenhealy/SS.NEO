@@ -1,0 +1,1160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0429A887-A87F-4103-9353-6E233F72BDC2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presentation.Web</RootNamespace>
+    <AssemblyName>Presentation.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\color_scheme\blue.css" />
+    <Content Include="assets\css\color_scheme\brown.css" />
+    <Content Include="assets\css\color_scheme\darkblue.css" />
+    <Content Include="assets\css\color_scheme\darkgreen.css" />
+    <Content Include="assets\css\color_scheme\green.css" />
+    <Content Include="assets\css\color_scheme\lightgrey.css" />
+    <Content Include="assets\css\color_scheme\orange.css" />
+    <Content Include="assets\css\color_scheme\pink.css" />
+    <Content Include="assets\css\color_scheme\red.css" />
+    <Content Include="assets\css\color_scheme\yellow.css" />
+    <Content Include="assets\css\essentials.css" />
+    <Content Include="assets\css\header-0.css" />
+    <Content Include="assets\css\header-1.css" />
+    <Content Include="assets\css\header-2.css" />
+    <Content Include="assets\css\header-3.css" />
+    <Content Include="assets\css\header-4.css" />
+    <Content Include="assets\css\header-5.css" />
+    <Content Include="assets\css\layout.css" />
+    <Content Include="assets\fonts\et-line.svg" />
+    <Content Include="assets\fonts\font-icons.svg" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\images\volleyball-499983_1920.jpg" />
+    <Content Include="assets\js\scripts.js" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\plugins\bootstrap\js\npm.js" />
+    <Content Include="assets\plugins\bootstrap\RTL\bootstrap-flipped.css" />
+    <Content Include="assets\plugins\bootstrap\RTL\bootstrap-flipped.min.css" />
+    <Content Include="assets\plugins\bootstrap\RTL\bootstrap-rtl.css" />
+    <Content Include="assets\plugins\bootstrap\RTL\bootstrap-rtl.min.css" />
+    <Content Include="assets\plugins\bootstrap\RTL\link.txt" />
+    <Content Include="assets\plugins\jquery\jquery-2.1.4.min.js" />
+    <Content Include="assets\plugins\jquery\jquery-ui.min.js" />
+    <Content Include="assets\plugins\jquery\jquery.ui.touch-punch.min.js" />
+    <Content Include="img\baseball.jpg" />
+    <Content Include="img\basketball1.jpg" />
+    <Content Include="img\basketball2.jpg" />
+    <Content Include="img\bocce1.jpg" />
+    <Content Include="img\bocce2.jpg" />
+    <Content Include="img\coming.jpg" />
+    <Content Include="img\sand1.jpg" />
+    <Content Include="img\sand2.jpg" />
+    <Content Include="img\soccer.jpg" />
+    <Content Include="img\volleyball1.jpg" />
+    <Content Include="vendor\sweetalert\dist\sweetalert.css" />
+    <Content Include="vendor\sweetalert\dist\sweetalert.min.js" />
+    <Content Include="Baseball\Clinics\Default.aspx" />
+    <Content Include="Baseball\Default.aspx" />
+    <Content Include="Basketball\Clinics\Default.aspx" />
+    <Content Include="Basketball\Leagues\Default.aspx" />
+    <Content Include="Basketball\Lessons\Default.aspx" />
+    <Content Include="Basketball\Tournaments\Default.aspx" />
+    <Content Include="Basketball\Youth\Default.aspx" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="Bocce\Leagues\Default.aspx" />
+    <Content Include="Bocce\Tournaments\Default.aspx" />
+    <Content Include="Browser.asmx" />
+    <Content Include="Company\Contact\Default.aspx" />
+    <Content Include="Company\About\Default.aspx" />
+    <Content Include="Company\Thanks\Default.aspx" />
+    <Content Include="Company\Testimonials\Default.aspx" />
+    <Content Include="Ad.aspx" />
+    <Content Include="icontact.html" />
+    <Content Include="css\forms.css" />
+    <Content Include="Facility\Training\Default.aspx" />
+    <Content Include="icontact.aspx" />
+    <Content Include="Loading.aspx" />
+    <Content Include="img\basketball-court.jpg" />
+    <Content Include="League.aspx" />
+    <Content Include="Players\Default.aspx" />
+    <Content Include="Players\Forgot\Default.aspx" />
+    <Content Include="Players\Logout\Default.aspx" />
+    <Content Include="Players\Password\Default.aspx" />
+    <Content Include="Players\Profile\Default.aspx" />
+    <Content Include="Players\SeekingPlayers\Default.aspx" />
+    <Content Include="Players\SeekingPlayer\Default.aspx" />
+    <Content Include="Players\SeekingTeams\Default.aspx" />
+    <Content Include="Players\SeekingTeam\Default.aspx" />
+    <Content Include="register.html" />
+    <Content Include="index.bak.html" />
+    <Content Include="Events\Host\Default.aspx" />
+    <Content Include="img\host.jpg" />
+    <Content Include="img\logoSmall.png" />
+    <Content Include="img\temp\beaker.jpg" />
+    <Content Include="img\temp\logo1-grayscale.png" />
+    <Content Include="img\temp\logo2-grayscale.png" />
+    <Content Include="img\temp\logo3-grayscale.png" />
+    <Content Include="img\temp\logo4-grayscale.png" />
+    <Content Include="img\temp\logo5-grayscale.png" />
+    <Content Include="img\temp\logo6-grayscale.png" />
+    <Content Include="Bocce\Default.aspx" />
+    <Content Include="SiteMap.xml" />
+    <Content Include="Company\Sponsors\Default.aspx" />
+    <Content Include="Company\Staff\Default.aspx" />
+    <Content Include="css\main.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\theme.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Events\Default.aspx" />
+    <Content Include="Facility\Rental\Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Gallery\Default.aspx" />
+    <Content Include="img\basketball-hoop.jpg" />
+    <Content Include="img\facility1.jpg" />
+    <Content Include="img\facility2.jpg" />
+    <Content Include="img\facility3.jpg" />
+    <Content Include="img\Logo.gif" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\LogoSmall.gif" />
+    <Content Include="img\pattern.png" />
+    <Content Include="img\volleyball-holding.jpg" />
+    <Content Include="img\volleyball-molton.jpg" />
+    <Content Include="img\volleyball-sand.jpg" />
+    <Content Include="img\volleyball-sunset.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\main.js" />
+    <Content Include="js\map.js" />
+    <Content Include="js\core.js" />
+    <Content Include="js\helpers.js" />
+    <Content Include="js\landing.js" />
+    <Content Include="Soccer\Default.aspx" />
+    <Content Include="vendor\bootstrap-3-timepicker\css\bootstrap-timepicker.css" />
+    <Content Include="vendor\bootstrap-3-timepicker\css\bootstrap-timepicker.min.css" />
+    <Content Include="vendor\bootstrap-3-timepicker\demo\index.html" />
+    <Content Include="vendor\bootstrap-3-timepicker\Gruntfile.js" />
+    <Content Include="vendor\bootstrap-3-timepicker\js\bootstrap-timepicker.js" />
+    <Content Include="vendor\bootstrap-3-timepicker\js\bootstrap-timepicker.min.js" />
+    <Content Include="vendor\bootstrap-3-timepicker\spec\js\fixtures\timepicker.html" />
+    <Content Include="vendor\bootstrap-3-timepicker\spec\js\helpers\jasmine-jquery.js" />
+    <Content Include="vendor\bootstrap-3-timepicker\spec\js\helpers\SpecHelper.js" />
+    <Content Include="vendor\bootstrap-3-timepicker\spec\js\KeyboardEventsSpec.js" />
+    <Content Include="vendor\bootstrap-3-timepicker\spec\js\MouseEventsSpec.js" />
+    <Content Include="vendor\bootstrap-3-timepicker\spec\js\TimepickerSpec.js" />
+    <Content Include="vendor\bootstrap-datepicker\css\datepicker.css" />
+    <Content Include="vendor\bootstrap-datepicker\css\datepicker3.css" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\demo_head.html" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\markup_component.html" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\markup_daterange.html" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\markup_inline.html" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\markup_input.html" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\option_calendarweeks.html" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\option_clearbtn.html" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\option_daysofweekdisabled.html" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\option_enddate.html" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\option_language.html" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\option_multidate.html" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\option_startdate.html" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\option_todaybtn.html" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\option_todayhighlight.html" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\option_weekstart.html" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\script\common.css" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\script\common.js" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\script\debug.js" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\script\html-imports.min.js" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_screenshots\script\screenshot.js" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_static\screenshots\demo_head.png" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_static\screenshots\markup_component.png" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_static\screenshots\markup_daterange.png" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_static\screenshots\markup_inline.png" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_static\screenshots\markup_input.png" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_static\screenshots\option_calendarweeks.png" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_static\screenshots\option_clearbtn.png" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_static\screenshots\option_daysofweekdisabled.png" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_static\screenshots\option_enddate.png" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_static\screenshots\option_language.png" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_static\screenshots\option_multidate.png" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_static\screenshots\option_startdate.png" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_static\screenshots\option_todaybtn.png" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_static\screenshots\option_todayhighlight.png" />
+    <Content Include="vendor\bootstrap-datepicker\docs\_static\screenshots\option_weekstart.png" />
+    <Content Include="vendor\bootstrap-datepicker\Gruntfile.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.ar.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.az.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.bs.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.cy.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.da.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.de.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.el.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.en-GB.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.es.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.et.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.eu.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.fa.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.fo.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.fr-CH.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.gl.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.he.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.hy.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.id.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.is.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.it-CH.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.it.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.ka.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.kh.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.kk.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.nl-BE.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.no.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.sr-latin.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.sr.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.th.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.uk.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.vi.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="vendor\bootstrap-datepicker\js\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\assets\coverage.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\assets\jquery-1.7.1.min.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\assets\mock.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\assets\qunit-logging.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\assets\qunit.css" />
+    <Content Include="vendor\bootstrap-datepicker\tests\assets\qunit.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\assets\utils.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\suites\calendar-weeks.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\suites\component.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\suites\data-api.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\suites\events.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\suites\formats.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\suites\inline.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\suites\keyboard_navigation\2011.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\suites\keyboard_navigation\2012.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\suites\keyboard_navigation\all.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\suites\methods.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\suites\mouse_navigation\2011.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\suites\mouse_navigation\2012.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\suites\mouse_navigation\all.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\suites\noconflict.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\suites\options.js" />
+    <Content Include="vendor\bootstrap-datepicker\tests\tests.html" />
+    <Content Include="vendor\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="vendor\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="vendor\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="vendor\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="vendor\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="vendor\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="vendor\bootstrap\dist\js\npm.js" />
+    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="vendor\bootstrap\Gruntfile.js" />
+    <Content Include="vendor\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="vendor\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="vendor\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="vendor\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="vendor\bootstrap\js\affix.js" />
+    <Content Include="vendor\bootstrap\js\alert.js" />
+    <Content Include="vendor\bootstrap\js\button.js" />
+    <Content Include="vendor\bootstrap\js\carousel.js" />
+    <Content Include="vendor\bootstrap\js\collapse.js" />
+    <Content Include="vendor\bootstrap\js\dropdown.js" />
+    <Content Include="vendor\bootstrap\js\modal.js" />
+    <Content Include="vendor\bootstrap\js\popover.js" />
+    <Content Include="vendor\bootstrap\js\scrollspy.js" />
+    <Content Include="vendor\bootstrap\js\tab.js" />
+    <Content Include="vendor\bootstrap\js\tooltip.js" />
+    <Content Include="vendor\bootstrap\js\transition.js" />
+    <Content Include="vendor\bootstrap\package.js" />
+    <Content Include="vendor\fontawesome\css\font-awesome.css" />
+    <Content Include="vendor\fontawesome\css\font-awesome.min.css" />
+    <Content Include="vendor\fontawesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="vendor\fontawesome\HELP-US-OUT.txt" />
+    <Content Include="vendor\jquery\dist\jquery.js" />
+    <Content Include="vendor\jquery\dist\jquery.min.js" />
+    <Content Include="vendor\jquery\MIT-LICENSE.txt" />
+    <Content Include="vendor\jquery\src\ajax.js" />
+    <Content Include="vendor\jquery\src\ajax\jsonp.js" />
+    <Content Include="vendor\jquery\src\ajax\load.js" />
+    <Content Include="vendor\jquery\src\ajax\parseJSON.js" />
+    <Content Include="vendor\jquery\src\ajax\parseXML.js" />
+    <Content Include="vendor\jquery\src\ajax\script.js" />
+    <Content Include="vendor\jquery\src\ajax\var\nonce.js" />
+    <Content Include="vendor\jquery\src\ajax\var\rquery.js" />
+    <Content Include="vendor\jquery\src\ajax\xhr.js" />
+    <Content Include="vendor\jquery\src\attributes.js" />
+    <Content Include="vendor\jquery\src\attributes\attr.js" />
+    <Content Include="vendor\jquery\src\attributes\classes.js" />
+    <Content Include="vendor\jquery\src\attributes\prop.js" />
+    <Content Include="vendor\jquery\src\attributes\support.js" />
+    <Content Include="vendor\jquery\src\attributes\val.js" />
+    <Content Include="vendor\jquery\src\callbacks.js" />
+    <Content Include="vendor\jquery\src\core.js" />
+    <Content Include="vendor\jquery\src\core\access.js" />
+    <Content Include="vendor\jquery\src\core\init.js" />
+    <Content Include="vendor\jquery\src\core\parseHTML.js" />
+    <Content Include="vendor\jquery\src\core\ready.js" />
+    <Content Include="vendor\jquery\src\core\var\rsingleTag.js" />
+    <Content Include="vendor\jquery\src\css.js" />
+    <Content Include="vendor\jquery\src\css\addGetHookIf.js" />
+    <Content Include="vendor\jquery\src\css\curCSS.js" />
+    <Content Include="vendor\jquery\src\css\defaultDisplay.js" />
+    <Content Include="vendor\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="vendor\jquery\src\css\support.js" />
+    <Content Include="vendor\jquery\src\css\swap.js" />
+    <Content Include="vendor\jquery\src\css\var\cssExpand.js" />
+    <Content Include="vendor\jquery\src\css\var\isHidden.js" />
+    <Content Include="vendor\jquery\src\css\var\rmargin.js" />
+    <Content Include="vendor\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="vendor\jquery\src\data.js" />
+    <Content Include="vendor\jquery\src\data\accepts.js" />
+    <Content Include="vendor\jquery\src\data\support.js" />
+    <Content Include="vendor\jquery\src\deferred.js" />
+    <Content Include="vendor\jquery\src\deprecated.js" />
+    <Content Include="vendor\jquery\src\dimensions.js" />
+    <Content Include="vendor\jquery\src\effects.js" />
+    <Content Include="vendor\jquery\src\effects\animatedSelector.js" />
+    <Content Include="vendor\jquery\src\effects\support.js" />
+    <Content Include="vendor\jquery\src\effects\Tween.js" />
+    <Content Include="vendor\jquery\src\event.js" />
+    <Content Include="vendor\jquery\src\event\alias.js" />
+    <Content Include="vendor\jquery\src\event\support.js" />
+    <Content Include="vendor\jquery\src\exports\amd.js" />
+    <Content Include="vendor\jquery\src\exports\global.js" />
+    <Content Include="vendor\jquery\src\intro.js" />
+    <Content Include="vendor\jquery\src\jquery.js" />
+    <Content Include="vendor\jquery\src\manipulation.js" />
+    <Content Include="vendor\jquery\src\manipulation\support.js" />
+    <Content Include="vendor\jquery\src\manipulation\var\rcheckableType.js" />
+    <Content Include="vendor\jquery\src\manipulation\_evalUrl.js" />
+    <Content Include="vendor\jquery\src\offset.js" />
+    <Content Include="vendor\jquery\src\outro.js" />
+    <Content Include="vendor\jquery\src\queue.js" />
+    <Content Include="vendor\jquery\src\queue\delay.js" />
+    <Content Include="vendor\jquery\src\selector-sizzle.js" />
+    <Content Include="vendor\jquery\src\selector.js" />
+    <Content Include="vendor\jquery\src\serialize.js" />
+    <Content Include="vendor\jquery\src\sizzle\dist\sizzle.js" />
+    <Content Include="vendor\jquery\src\sizzle\dist\sizzle.min.js" />
+    <Content Include="vendor\jquery\src\support.js" />
+    <Content Include="vendor\jquery\src\traversing.js" />
+    <Content Include="vendor\jquery\src\traversing\findFilter.js" />
+    <Content Include="vendor\jquery\src\traversing\var\rneedsContext.js" />
+    <Content Include="vendor\jquery\src\var\class2type.js" />
+    <Content Include="vendor\jquery\src\var\concat.js" />
+    <Content Include="vendor\jquery\src\var\deletedIds.js" />
+    <Content Include="vendor\jquery\src\var\hasOwn.js" />
+    <Content Include="vendor\jquery\src\var\indexOf.js" />
+    <Content Include="vendor\jquery\src\var\pnum.js" />
+    <Content Include="vendor\jquery\src\var\push.js" />
+    <Content Include="vendor\jquery\src\var\rnotwhite.js" />
+    <Content Include="vendor\jquery\src\var\slice.js" />
+    <Content Include="vendor\jquery\src\var\strundefined.js" />
+    <Content Include="vendor\jquery\src\var\support.js" />
+    <Content Include="vendor\jquery\src\var\toString.js" />
+    <Content Include="vendor\jquery\src\wrap.js" />
+    <Content Include="vendor\magnific-popup\dist\jquery.magnific-popup.js" />
+    <Content Include="vendor\magnific-popup\dist\jquery.magnific-popup.min.js" />
+    <Content Include="vendor\magnific-popup\dist\magnific-popup.css" />
+    <Content Include="vendor\magnific-popup\Gruntfile.js" />
+    <Content Include="vendor\magnific-popup\src\js\ajax.js" />
+    <Content Include="vendor\magnific-popup\src\js\core.js" />
+    <Content Include="vendor\magnific-popup\src\js\fastclick.js" />
+    <Content Include="vendor\magnific-popup\src\js\gallery.js" />
+    <Content Include="vendor\magnific-popup\src\js\iframe.js" />
+    <Content Include="vendor\magnific-popup\src\js\image.js" />
+    <Content Include="vendor\magnific-popup\src\js\inline.js" />
+    <Content Include="vendor\magnific-popup\src\js\retina.js" />
+    <Content Include="vendor\magnific-popup\src\js\zoom.js" />
+    <Content Include="vendor\maskedinput\jquery.maskedinput.min.js" />
+    <Content Include="Volleyball\Clinics\Default.aspx" />
+    <Content Include="Volleyball\IndoorSand\Leagues\Default.aspx" />
+    <Content Include="Volleyball\IndoorSand\Tournaments\Default.aspx" />
+    <Content Include="Volleyball\Indoor\Tournaments\Default.aspx" />
+    <Content Include="Volleyball\Indoor\Leagues\Default.aspx" />
+    <Content Include="Volleyball\Lessons\Default.aspx" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Volleyball\NEOVC\Default.aspx" />
+    <Content Include="Web References\WebServiceCMS\Browser.disco" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Baseball\Clinics\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Baseball\Clinics\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Baseball\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Baseball\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Basketball\Clinics\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Basketball\Clinics\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Basketball\Leagues\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Basketball\Leagues\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Basketball\Lessons\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Basketball\Lessons\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Basketball\Tournaments\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Basketball\Tournaments\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Basketball\Youth\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Basketball\Youth\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bocce\Leagues\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bocce\Leagues\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bocce\Tournaments\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bocce\Tournaments\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Browser.asmx.cs">
+      <DependentUpon>Browser.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Company\Contact\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company\Contact\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Company\About\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company\About\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Company\Thanks\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company\Thanks\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Company\Testimonials\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company\Testimonials\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ad.aspx.cs">
+      <DependentUpon>Ad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ad.aspx.designer.cs">
+      <DependentUpon>Ad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facility\Training\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facility\Training\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="icontact.aspx.cs">
+      <DependentUpon>icontact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="icontact.aspx.designer.cs">
+      <DependentUpon>icontact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.aspx.cs">
+      <DependentUpon>Loading.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loading.aspx.designer.cs">
+      <DependentUpon>Loading.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Events\Host\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Events\Host\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="League.aspx.cs">
+      <DependentUpon>League.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="League.aspx.designer.cs">
+      <DependentUpon>League.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Players\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Players\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Players\Forgot\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Players\Forgot\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Players\Logout\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Players\Logout\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Players\Password\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Players\Password\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Players\Profile\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Players\Profile\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Players\SeekingPlayers\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Players\SeekingPlayers\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Players\SeekingPlayer\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Players\SeekingPlayer\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Players\SeekingTeams\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Players\SeekingTeams\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Players\SeekingTeam\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Players\SeekingTeam\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Company\Sponsors\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company\Sponsors\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Company\Staff\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company\Staff\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Events\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Events\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facility\Rental\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facility\Rental\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gallery\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallery\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Bocce\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bocce\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Soccer\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Soccer\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Volleyball\Clinics\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volleyball\Clinics\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Volleyball\IndoorSand\Leagues\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volleyball\IndoorSand\Leagues\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Volleyball\IndoorSand\Tournaments\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volleyball\IndoorSand\Tournaments\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Volleyball\Indoor\Tournaments\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volleyball\Indoor\Tournaments\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Volleyball\Indoor\Leagues\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volleyball\Indoor\Leagues\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Volleyball\Lessons\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volleyball\Lessons\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Volleyball\NEOVC\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volleyball\NEOVC\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebServiceCMS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="_Classes\ControlClass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Classes\PlayerPageClass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Classes\MasterClass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Classes\PageClass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Controls\Clinic.ascx.cs">
+      <DependentUpon>Clinic.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Controls\Clinic.ascx.designer.cs">
+      <DependentUpon>Clinic.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_Controls\Advertisement.ascx.cs">
+      <DependentUpon>Advertisement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Controls\Advertisement.ascx.designer.cs">
+      <DependentUpon>Advertisement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_Controls\Sidebar.ascx.cs">
+      <DependentUpon>Sidebar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Controls\Sidebar.ascx.designer.cs">
+      <DependentUpon>Sidebar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_Controls\Tournament.ascx.cs">
+      <DependentUpon>Tournament.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Controls\Tournament.ascx.designer.cs">
+      <DependentUpon>Tournament.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_Controls\League.ascx.cs">
+      <DependentUpon>League.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Controls\League.ascx.designer.cs">
+      <DependentUpon>League.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_Controls\Lesson.ascx.cs">
+      <DependentUpon>Lesson.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Controls\Lesson.ascx.designer.cs">
+      <DependentUpon>Lesson.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_Masters\interior.master.cs">
+      <DependentUpon>interior.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Masters\interior.master.designer.cs">
+      <DependentUpon>interior.master</DependentUpon>
+    </Compile>
+    <Compile Include="_Masters\players.master.cs">
+      <DependentUpon>players.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Masters\players.master.designer.cs">
+      <DependentUpon>players.master</DependentUpon>
+    </Compile>
+    <Compile Include="_Masters\Site.master.cs">
+      <DependentUpon>Site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Masters\Site.master.designer.cs">
+      <DependentUpon>Site.master</DependentUpon>
+    </Compile>
+    <Compile Include="_Masters\Top.Master.cs">
+      <DependentUpon>Top.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Masters\Top.Master.designer.cs">
+      <DependentUpon>Top.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="assets\plugins\bootstrap\RTL\bootstrap-flipped.css.map" />
+    <Content Include="assets\plugins\bootstrap\RTL\bootstrap-rtl.css.map" />
+    <Content Include="assets\plugins\jquery\jquery-2.1.4.min.map" />
+    <Content Include="assets\fonts\et-line.eot" />
+    <Content Include="assets\fonts\et-line.ttf" />
+    <Content Include="assets\fonts\et-line.woff" />
+    <Content Include="assets\fonts\font-icons.eot" />
+    <Content Include="assets\fonts\font-icons.ttf" />
+    <Content Include="assets\fonts\font-icons.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\steve.pubxml" />
+    <Content Include="vendor\bootstrap\.bower.json" />
+    <Content Include="vendor\bootstrap\bower.json" />
+    <Content Include="vendor\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="vendor\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="vendor\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="vendor\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="vendor\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="vendor\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="vendor\bootstrap\grunt\.jshintrc" />
+    <Content Include="vendor\bootstrap\grunt\configBridge.json" />
+    <Content Include="vendor\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="vendor\bootstrap\js\.jscsrc" />
+    <Content Include="vendor\bootstrap\js\.jshintrc" />
+    <Content Include="vendor\bootstrap\less\.csscomb.json" />
+    <Content Include="vendor\bootstrap\less\.csslintrc" />
+    <Content Include="vendor\bootstrap\less\alerts.less" />
+    <Content Include="vendor\bootstrap\less\badges.less" />
+    <Content Include="vendor\bootstrap\less\bootstrap.less" />
+    <Content Include="vendor\bootstrap\less\breadcrumbs.less" />
+    <Content Include="vendor\bootstrap\less\button-groups.less" />
+    <Content Include="vendor\bootstrap\less\buttons.less" />
+    <Content Include="vendor\bootstrap\less\carousel.less" />
+    <Content Include="vendor\bootstrap\less\close.less" />
+    <Content Include="vendor\bootstrap\less\code.less" />
+    <Content Include="vendor\bootstrap\less\component-animations.less" />
+    <Content Include="vendor\bootstrap\less\dropdowns.less" />
+    <Content Include="vendor\bootstrap\less\forms.less" />
+    <Content Include="vendor\bootstrap\less\glyphicons.less" />
+    <Content Include="vendor\bootstrap\less\grid.less" />
+    <Content Include="vendor\bootstrap\less\input-groups.less" />
+    <Content Include="vendor\bootstrap\less\jumbotron.less" />
+    <Content Include="vendor\bootstrap\less\labels.less" />
+    <Content Include="vendor\bootstrap\less\list-group.less" />
+    <Content Include="vendor\bootstrap\less\media.less" />
+    <Content Include="vendor\bootstrap\less\mixins.less" />
+    <Content Include="vendor\bootstrap\less\mixins\alerts.less" />
+    <Content Include="vendor\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="vendor\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="vendor\bootstrap\less\mixins\buttons.less" />
+    <Content Include="vendor\bootstrap\less\mixins\center-block.less" />
+    <Content Include="vendor\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="vendor\bootstrap\less\mixins\forms.less" />
+    <Content Include="vendor\bootstrap\less\mixins\gradients.less" />
+    <Content Include="vendor\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="vendor\bootstrap\less\mixins\grid.less" />
+    <Content Include="vendor\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="vendor\bootstrap\less\mixins\image.less" />
+    <Content Include="vendor\bootstrap\less\mixins\labels.less" />
+    <Content Include="vendor\bootstrap\less\mixins\list-group.less" />
+    <Content Include="vendor\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="vendor\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="vendor\bootstrap\less\mixins\opacity.less" />
+    <Content Include="vendor\bootstrap\less\mixins\pagination.less" />
+    <Content Include="vendor\bootstrap\less\mixins\panels.less" />
+    <Content Include="vendor\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="vendor\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="vendor\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="vendor\bootstrap\less\mixins\resize.less" />
+    <Content Include="vendor\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="vendor\bootstrap\less\mixins\size.less" />
+    <Content Include="vendor\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="vendor\bootstrap\less\mixins\table-row.less" />
+    <Content Include="vendor\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="vendor\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="vendor\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="vendor\bootstrap\less\modals.less" />
+    <Content Include="vendor\bootstrap\less\navbar.less" />
+    <Content Include="vendor\bootstrap\less\navs.less" />
+    <Content Include="vendor\bootstrap\less\normalize.less" />
+    <Content Include="vendor\bootstrap\less\pager.less" />
+    <Content Include="vendor\bootstrap\less\pagination.less" />
+    <Content Include="vendor\bootstrap\less\panels.less" />
+    <Content Include="vendor\bootstrap\less\popovers.less" />
+    <Content Include="vendor\bootstrap\less\print.less" />
+    <Content Include="vendor\bootstrap\less\progress-bars.less" />
+    <Content Include="vendor\bootstrap\less\responsive-embed.less" />
+    <Content Include="vendor\bootstrap\less\responsive-utilities.less" />
+    <Content Include="vendor\bootstrap\less\scaffolding.less" />
+    <Content Include="vendor\bootstrap\less\tables.less" />
+    <Content Include="vendor\bootstrap\less\theme.less" />
+    <Content Include="vendor\bootstrap\less\thumbnails.less" />
+    <Content Include="vendor\bootstrap\less\tooltip.less" />
+    <Content Include="vendor\bootstrap\less\type.less" />
+    <Content Include="vendor\bootstrap\less\utilities.less" />
+    <Content Include="vendor\bootstrap\less\variables.less" />
+    <Content Include="vendor\bootstrap\less\wells.less" />
+    <Content Include="vendor\bootstrap\LICENSE" />
+    <Content Include="vendor\bootstrap\package.json" />
+    <Content Include="vendor\bootstrap\README.md" />
+    <Content Include="vendor\fontawesome\.bower.json" />
+    <Content Include="vendor\fontawesome\.npmignore" />
+    <Content Include="vendor\fontawesome\bower.json" />
+    <Content Include="vendor\fontawesome\css\font-awesome.css.map" />
+    <Content Include="vendor\fontawesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="vendor\fontawesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="vendor\fontawesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="vendor\fontawesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="vendor\fontawesome\fonts\FontAwesome.otf" />
+    <Content Include="vendor\fontawesome\less\animated.less" />
+    <Content Include="vendor\fontawesome\less\bordered-pulled.less" />
+    <Content Include="vendor\fontawesome\less\core.less" />
+    <Content Include="vendor\fontawesome\less\fixed-width.less" />
+    <Content Include="vendor\fontawesome\less\font-awesome.less" />
+    <Content Include="vendor\fontawesome\less\icons.less" />
+    <Content Include="vendor\fontawesome\less\larger.less" />
+    <Content Include="vendor\fontawesome\less\list.less" />
+    <Content Include="vendor\fontawesome\less\mixins.less" />
+    <Content Include="vendor\fontawesome\less\path.less" />
+    <Content Include="vendor\fontawesome\less\rotated-flipped.less" />
+    <Content Include="vendor\fontawesome\less\stacked.less" />
+    <Content Include="vendor\fontawesome\less\variables.less" />
+    <Content Include="vendor\fontawesome\scss\font-awesome.scss" />
+    <Content Include="vendor\fontawesome\scss\_animated.scss" />
+    <Content Include="vendor\fontawesome\scss\_bordered-pulled.scss" />
+    <Content Include="vendor\fontawesome\scss\_core.scss" />
+    <Content Include="vendor\fontawesome\scss\_fixed-width.scss" />
+    <Content Include="vendor\fontawesome\scss\_icons.scss" />
+    <Content Include="vendor\fontawesome\scss\_larger.scss" />
+    <Content Include="vendor\fontawesome\scss\_list.scss" />
+    <Content Include="vendor\fontawesome\scss\_mixins.scss" />
+    <Content Include="vendor\fontawesome\scss\_path.scss" />
+    <Content Include="vendor\fontawesome\scss\_rotated-flipped.scss" />
+    <Content Include="vendor\fontawesome\scss\_stacked.scss" />
+    <Content Include="vendor\fontawesome\scss\_variables.scss" />
+    <Content Include="vendor\jquery\.bower.json" />
+    <Content Include="vendor\jquery\bower.json" />
+    <Content Include="vendor\jquery\dist\jquery.min.map" />
+    <Content Include="vendor\jquery\src\sizzle\dist\sizzle.min.map" />
+    <Content Include="vendor\magnific-popup\.bower.json" />
+    <Content Include="vendor\magnific-popup\.jshintrc" />
+    <Content Include="vendor\magnific-popup\.travis.yml" />
+    <Content Include="vendor\magnific-popup\bower.json" />
+    <Content Include="vendor\magnific-popup\magnific-popup.jquery.json" />
+    <Content Include="vendor\magnific-popup\package.json" />
+    <Content Include="vendor\magnific-popup\README.md" />
+    <Content Include="vendor\magnific-popup\src\css\main.scss" />
+    <Content Include="vendor\magnific-popup\src\css\_settings.scss" />
+    <Content Include="vendor\bootstrap-3-timepicker\.bower.json" />
+    <Content Include="vendor\bootstrap-3-timepicker\component.json" />
+    <Content Include="vendor\bootstrap-3-timepicker\composer.json" />
+    <Content Include="vendor\bootstrap-3-timepicker\less\timepicker.less" />
+    <Content Include="vendor\bootstrap-3-timepicker\LICENSE" />
+    <Content Include="vendor\bootstrap-3-timepicker\package.json" />
+    <Content Include="vendor\bootstrap-3-timepicker\README.md" />
+    <Content Include="vendor\bootstrap-datepicker\.bower.json" />
+    <Content Include="vendor\bootstrap-datepicker\.jscs.json" />
+    <Content Include="vendor\bootstrap-datepicker\.jshintrc" />
+    <Content Include="vendor\bootstrap-datepicker\.travis.yml" />
+    <Content Include="vendor\bootstrap-datepicker\bower.json" />
+    <Content Include="vendor\bootstrap-datepicker\build\build.less" />
+    <Content Include="vendor\bootstrap-datepicker\build\build3.less" />
+    <Content Include="vendor\bootstrap-datepicker\build\build_standalone.less" />
+    <Content Include="vendor\bootstrap-datepicker\build\build_standalone3.less" />
+    <Content Include="vendor\bootstrap-datepicker\CHANGELOG.md" />
+    <Content Include="vendor\bootstrap-datepicker\composer.json" />
+    <Content Include="vendor\bootstrap-datepicker\CONTRIBUTING.md" />
+    <Content Include="vendor\bootstrap-datepicker\docs\conf.py" />
+    <Content Include="vendor\bootstrap-datepicker\docs\events.rst" />
+    <Content Include="vendor\bootstrap-datepicker\docs\i18n.rst" />
+    <Content Include="vendor\bootstrap-datepicker\docs\index.rst" />
+    <Content Include="vendor\bootstrap-datepicker\docs\keyboard.rst" />
+    <Content Include="vendor\bootstrap-datepicker\docs\make.bat" />
+    <Content Include="vendor\bootstrap-datepicker\docs\Makefile" />
+    <Content Include="vendor\bootstrap-datepicker\docs\markup.rst" />
+    <Content Include="vendor\bootstrap-datepicker\docs\methods.rst" />
+    <Content Include="vendor\bootstrap-datepicker\docs\options.rst" />
+    <Content Include="vendor\bootstrap-datepicker\docs\REAME.md" />
+    <Content Include="vendor\bootstrap-datepicker\less\datepicker.less" />
+    <Content Include="vendor\bootstrap-datepicker\less\datepicker3.less" />
+    <Content Include="vendor\bootstrap-datepicker\LICENSE" />
+    <Content Include="vendor\bootstrap-datepicker\package.json" />
+    <Content Include="vendor\bootstrap-datepicker\README.md" />
+    <Content Include="vendor\bootstrap-datepicker\tests\README.md" />
+    <Content Include="Web References\WebServiceCMS\Browser.wsdl" />
+    <Content Include="Web References\WebServiceCMS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="_Controls\Clinic.ascx" />
+    <Content Include="_Controls\Advertisement.ascx" />
+    <Content Include="_Controls\Sidebar.ascx" />
+    <Content Include="_Controls\Tournament.ascx" />
+    <Content Include="_Controls\League.ascx" />
+    <Content Include="_Controls\Lesson.ascx" />
+    <Content Include="_Masters\Top.Master" />
+    <Content Include="_Masters\Site.master" />
+    <Content Include="_Masters\interior.master" />
+    <Content Include="_Masters\players.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:57713/Browser.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebServiceCMS\</RelPath>
+      <UpdateFromURL>http://localhost:57713/Browser.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Presentation_Web_WebServiceCMS_Browser</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{1ce3ac30-66ed-4ae8-9b4c-a024d3703590}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{4682f3de-6bdd-415b-882a-c1df3aefe41c}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52740</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

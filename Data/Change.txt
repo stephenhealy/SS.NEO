@@ -1,0 +1,36 @@
+﻿CREATE TABLE [dbo].[PhotoAlbums](
+	[AssetID] [int] NOT NULL,
+	[CategoryID] [int] NOT NULL,
+	[Name] [varchar](100) NULL,
+	[Display] [int] NOT NULL,
+	[Enabled] [bit] NOT NULL,
+	[Deleted] [bit] NOT NULL,
+ CONSTRAINT [PK_PhotoAlbums] PRIMARY KEY CLUSTERED 
+(
+	[AssetID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+CREATE TABLE [dbo].[PhotoCategories](
+	[AssetID] [int] NOT NULL,
+	[Name] [varchar](50) NULL,
+	[Display] [int] NOT NULL,
+	[Enabled] [bit] NOT NULL,
+	[Deleted] [bit] NOT NULL,
+ CONSTRAINT [PK_PhotoCategories] PRIMARY KEY CLUSTERED 
+(
+	[AssetID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+EXECUTE sp_rename N'dbo.Photos.SportID', N'Tmp_AlbumID', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.Photos.Tmp_AlbumID', N'AlbumID', 'COLUMN' 
+GO
+ALTER TABLE dbo.Photos SET (LOCK_ESCALATION = TABLE)
+GO
+

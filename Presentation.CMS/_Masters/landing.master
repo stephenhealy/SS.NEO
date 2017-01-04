@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_Masters/Site.Master" AutoEventWireup="true" CodeBehind="landing.master.cs" Inherits="Presentation.CMS._Masters.landing" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="portlet portlet-default">
+        <div class="portlet-header">
+            <div id="button-wrapper" style="float: right; position: relative; z-index: 101;">
+                <asp:ContentPlaceHolder ID="Buttons" runat="server" />
+            </div>
+            <div style="position: relative; z-index: 100;">
+                <h3 class="portlet-title">
+                    <u>
+                        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+                    </u>
+                </h3>
+            </div>
+        </div><!-- /.portlet-header -->
+        <div class="portlet-body">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div><!-- /.portlet-body -->
+    </div><!-- /.portlet -->
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ScriptContent" runat="server">
+    <script>
+        arrLoad.push(new CodeBlock(function () {
+            $("input[type='password']").val('');
+        }));
+    </script>
+    <asp:ContentPlaceHolder ID="ScriptContent" runat="server" />
+</asp:Content>

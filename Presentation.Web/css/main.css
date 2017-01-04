@@ -1,0 +1,199 @@
+.validation-text {
+    color: #C00;
+    font-size: 80%;
+}
+.validation-required:after { 
+    content: 'This value is required.'; 
+} 
+.validation-compare:after { 
+    content: 'This value must be the same.'; 
+} 
+.validation-integer:after { 
+     content: 'This value should be a valid integer.'; 
+} 
+.validation-select:after { 
+    content: 'This value is required.'; 
+} 
+.validation-email:after { 
+    content: 'This value should be a valid email address.'; 
+}
+
+.masthead,
+.footer {
+    background: #222;
+}
+.copyright {
+    background: #111;
+}
+.masthead {
+    background-image: url("/img/pattern.png");
+}
+.masthead-carousel {
+    min-width: 400px;
+}
+    .masthead-carousel .carousel-inner {
+        height: 600px;
+        -webkit-transition: all .25s;
+        -moz-transition: all .25s;
+        -ms-transition: all .25s;
+        transition: all .25s;
+    }
+        .masthead-carousel .carousel-inner .item {
+            background-size: 100%; 
+            background-color: #888;
+            background-position: center; 
+            height: 100%;
+        }
+            .masthead-carousel .carousel-inner .item .masthead-text {
+                background-color: rgba(0,0,0,.5);
+                padding: 20px 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px
+            }
+            a.red-link,
+            a.red-link:link {
+                color: #d74b4b;
+                text-decoration: none;
+            }
+            a.red-link:hover {
+                color: #d74b4b;
+                text-decoration: underline;
+            }
+    .masthead-carousel .carousel-indicators {
+        bottom: 0px;
+    }
+.logo {
+    display: inline;
+}
+.logo-sm {
+    display: none;
+}
+.content-feature.stubby {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+.content-feature.alt {
+    background-color: #f3f3f3;
+}
+.text-muted {
+    color: #ccc;
+}
+.league p {
+    font-size: 13px !important;
+}
+#subscription label {
+    font-weight: normal;
+    padding-left: 5px;
+}
+#subscription ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 0px 0px 5px;
+}
+.posts.recent {
+    font-size: 90%;
+}
+    .posts.recent h3 {
+        font-size: 18px;
+    }
+    .posts.recent h4 {
+        font-size: 14px;
+    }
+    .posts.recent span {
+        font-size: 12px;
+    }
+
+blockquote {
+    border: none;
+    font-size: 12px;
+}
+
+.form-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+    .form-group ul li {
+        padding: 0;
+        margin: 0;
+    }
+        .form-group ul li input {
+            margin-right: 5px;
+        }
+        .form-group ul li label {
+            font-weight: normal;
+        }
+
+.pricing-table-content h5 {
+    height: 25px;
+}
+.album {
+    cursor: pointer;
+    padding: 10px;
+}
+    .album:hover {
+        background-color: rgba(100, 100, 100, 0.05);
+    }
+    .album::after {
+        -webkit-transition: all .218s;
+        -moz-transition: all .218s;
+        -o-transition: all .218s;
+        transition: all .218s;
+        position: absolute;
+        right: 20px;
+        top: 8px;
+        font-family: 'FontAwesome';
+        font-size: 17px;
+        font-weight: bold;
+        content: "\f078";
+        color: #bebebe;
+    }
+    .album.active-album::after {
+        content: "\f077";
+    }
+    .album span {
+        font-size: 80%;
+        font-weight: normal;
+        opacity: 0.80;
+        filter: alpha(opacity=80);
+        padding-left: 3px;
+        letter-spacing: 2px;
+    }
+
+.advertisement {
+    background-color: #fafafa;
+    border-top: 1px solid rgba(0,0,0,.1);
+    padding: 40px 0px;
+}
+    .advertisement .container {
+    }
+        .advertisement .container .row {
+            padding: 20px;
+        }
+
+/* iContact */
+.elcontainer {
+    padding: 10px;
+}
+    .elcontainer .formEl.fieldtype-input label {
+        width: 150px;
+        padding: 8px;
+    }
+    .elcontainer .formEl.fieldtype-input input {
+        width: 250px;
+    }
+    .elcontainer .formEl.fieldtype-checkbox {
+        width: 33% !important;
+        padding-top: 15px;
+    }
+    .elcontainer h3 {
+        font-size: 18px;
+    }
+    .elcontainer .checkbox input {
+        position: relative;
+        margin: 0 5px 0 0;
+        opacity: 1;
+        left: 0px;
+    }
+

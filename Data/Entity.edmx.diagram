@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3e84e6d3eeef4d65a94c17e8cfc44b42" Name="Diagram1">
+        <EntityTypeShape EntityType="DBModel.Asset" Width="1.5" PointX="0.28916957429105861" PointY="21.578916604434568" />
+        <EntityTypeShape EntityType="DBModel.Carousel" Width="1.5" PointX="4.1672346015308213" PointY="5.51455886918798" />
+        <EntityTypeShape EntityType="DBModel.EventLog" Width="1.5" PointX="9.369285396006557" PointY="22.651663045702346" />
+        <EntityTypeShape EntityType="DBModel.Event" Width="1.5" PointX="0.18529338025734451" PointY="7.29414761406097" />
+        <EntityTypeShape EntityType="DBModel.Key" Width="1.5" PointX="9.6721583258696633" PointY="16.509441234408616" />
+        <EntityTypeShape EntityType="DBModel.Lesson" Width="1.5" PointX="10.461074848874041" PointY="30.860316737955582" />
+        <EntityTypeShape EntityType="DBModel.LessonsRegister" Width="1.5" PointX="11.845288898723801" PointY="6.0624597547866683" />
+        <EntityTypeShape EntityType="DBModel.Log" Width="1.5" PointX="2.3323178507072471" PointY="27.282506448813951" />
+        <EntityTypeShape EntityType="DBModel.LogDetail" Width="1.5" PointX="4.5489598496579378" PointY="0.084688618818618638" />
+        <EntityTypeShape EntityType="DBModel.News" Width="1.5" PointX="7.78837880109827" PointY="10.223175381414208" />
+        <EntityTypeShape EntityType="DBModel.Player" Width="1.5" PointX="11.317657336274934" PointY="17.255248971867957" />
+        <EntityTypeShape EntityType="DBModel.Position" Width="1.5" PointX="0.23734949167694408" PointY="14.772202483737935" />
+        <EntityTypeShape EntityType="DBModel.Session" Width="1.5" PointX="1.8471085139769636" PointY="7.1690488491063231" />
+        <EntityTypeShape EntityType="DBModel.SubscriptionMember" Width="1.5" PointX="6.1410736637846917" PointY="16.644450180532619" />
+        <EntityTypeShape EntityType="DBModel.Subscription" Width="1.5" PointX="2.4948138904267987" PointY="19.579460317073138" />
+        <EntityTypeShape EntityType="DBModel.SubscriptionType" Width="1.5" PointX="3.3953116887227219" PointY="21.460221986034988" />
+        <EntityTypeShape EntityType="DBModel.Testimonial" Width="1.5" PointX="1.3641091777775944" PointY="22.444709773382503" />
+        <EntityTypeShape EntityType="DBModel.Tournament" Width="1.5" PointX="8.1285231095405877" PointY="6.7517952950446842" />
+        <EntityTypeShape EntityType="DBModel.User" Width="1.5" PointX="2.0161973564029658" PointY="0.68643024595753765" />
+        <EntityTypeShape EntityType="DBModel.Seeking" Width="1.5" PointX="10.799943269602927" PointY="13.895220673594261" />
+        <EntityTypeShape EntityType="DBModel.PositionMember" Width="1.5" PointX="9.5478997237737762" PointY="8.1395245232337743" />
+        <EntityTypeShape EntityType="DBModel.EventRegistration" Width="1.5" PointX="2.4499213949078325" PointY="27.30668066223463" />
+        <EntityTypeShape EntityType="DBModel.Sponsor" Width="1.5" PointX="5.9953860947840782" PointY="9.7389401391795563" />
+        <EntityTypeShape EntityType="DBModel.Setting" Width="1.5" PointX="7.2943040539018362" PointY="24.014264430857388" />
+        <EntityTypeShape EntityType="DBModel.League" Width="1.5" PointX="2.8882921202519407" PointY="0.35093672589908204" />
+        <EntityTypeShape EntityType="DBModel.Clinic" Width="1.5" PointX="11.63414670137416" PointY="12.990094980686015" />
+        <EntityTypeShape EntityType="DBModel.PhotoAlbum" Width="1.5" PointX="2.3012063327716694" PointY="14.287793017126523" />
+        <EntityTypeShape EntityType="DBModel.PhotoCategory" Width="1.5" PointX="2.1624077382322437" PointY="12.959573349430958" />
+        <EntityTypeShape EntityType="DBModel.Photo" Width="1.5" PointX="1.6135337285760483" PointY="2.64298868302395" />
+        <EntityTypeShape EntityType="DBModel.Sport" Width="1.5" PointX="11.934111384644226" PointY="25.359308999664758" />
+        <EntityTypeShape EntityType="DBModel.AdvertisementClick" Width="1.5" PointX="10.005935539494239" PointY="28.278874380643888" />
+        <EntityTypeShape EntityType="DBModel.Advertisement" Width="1.5" PointX="0.438411181996768" PointY="8.1615117230273366" />
+        <EntityTypeShape EntityType="DBModel.Bocce" Width="1.5" PointX="2.7576206190314241" PointY="20.927521089523808" />
+        <EntityTypeShape EntityType="DBModel.Sidebar" Width="1.5" PointX="11.362066900060544" PointY="16.114126853697993" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

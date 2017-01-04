@@ -1,0 +1,12 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_Masters/Top.Master" AutoEventWireup="true" CodeBehind="Browser.master.cs" Inherits="Presentation.CMS._Masters.Browser" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Modal" runat="server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ScriptContent" runat="server">
+    <asp:ContentPlaceHolder ID="ScriptContent" runat="server" />
+</asp:Content>

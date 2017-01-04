@@ -1,0 +1,160 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_Masters/Top.Master" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Presentation.CMS._Masters.Site" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div id="wrapper">
+        <header class="navbar" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-cog"></i>
+                    </button>
+                    <a class="navbar-brand navbar-brand-img" href="<%= master.RelativePath %>/">
+                        <img alt="SITESTEAM" src="/img/logo-white.png" />
+                    </a>
+                </div><!-- /.navbar-header -->
+                <nav class="collapse navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="<%= Active("/Dashboard.aspx") %>">
+                            <a href="<%= master.RelativePath %>/Dashboard.aspx">Dashboard</a>
+                        </li>
+                        <li class="dropdown<%= Active("/Content/") %>">
+                            <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">Content <i class="mainnav-caret"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Content/Advertisements.aspx"><i class="fa fa-mouse-pointer dropdown-icon"></i> Advertisements</a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Content/Carousel.aspx"><i class="fa fa-film dropdown-icon"></i> Home Carousel</a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Content/News.aspx"><i class="fa fa-bullhorn dropdown-icon"></i> News</a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Content/Events.aspx"><i class="fa fa-flag-o dropdown-icon"></i> Events</a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Content/EventRegistration.aspx"><i class="fa fa-level-up fa-rotate-90 dropdown-icon"></i> <em>Submissions</em></a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Content/PhotoCategories.aspx"><i class="fa fa-folder-open dropdown-icon"></i> Photo Categories</a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Content/PhotoAlbums.aspx"><i class="fa fa-book dropdown-icon"></i> Photo Albums</a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Content/Photos.aspx"><i class="fa fa-camera dropdown-icon"></i> Photos</a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Content/Sponsors.aspx"><i class="fa fa-dollar dropdown-icon"></i> Sponsors</a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Content/Testimonials.aspx"><i class="fa fa-comment-o dropdown-icon"></i> Testimonials</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown<%= Active("/Athletics/") %>">
+                            <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">Athletics<i class="mainnav-caret"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Athletics/Sports.aspx"><i class="fa fa-futbol-o dropdown-icon"></i> Sports</a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Athletics/Sessions.aspx"><i class="fa fa-calendar dropdown-icon"></i> Sessions</a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Athletics/Leagues.aspx"><i class="fa fa-list dropdown-icon"></i> Leagues</a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Athletics/Lessons.aspx"><i class="fa fa-cubes dropdown-icon"></i> Lessons</a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Athletics/LessonsRegister.aspx"><i class="fa fa-level-up fa-rotate-90 dropdown-icon"></i> <em>Registrations</em></a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Athletics/Tournaments.aspx"><i class="fa fa-share-alt dropdown-icon"></i> Tournaments</a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Athletics/Clinics.aspx"><i class="fa fa-group dropdown-icon"></i> Clinics</a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Athletics/Positions.aspx"><i class="fa fa-check-circle-o dropdown-icon"></i> Positions</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown<%= Active("/System/") %> navbar-profile">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
+                                <asp:Image ID="imgAvatar" runat="server" CssClass="navbar-profile-avatar" ImageUrl="~/img/avatar.png" />
+                                <span class="visible-xs-inline">@peterlandt &nbsp;</span>
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/System/Users.aspx?ID=<%= master.User.ID %>"><i class="fa fa-user"></i> &nbsp;&nbsp;My Profile</a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/System/Users.aspx"><i class="fa fa-users dropdown-icon"></i> Users</a>
+                                </li>
+                                <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/System/Settings.aspx"><i class="fa fa-cogs"></i> &nbsp;&nbsp;Settings</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click">
+                                        <i class="fa fa-sign-out"></i> &nbsp;&nbsp;Logout
+                                    </asp:LinkButton>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div><!-- /.container -->
+        </header>
+
+        <div class="mainnav">
+        </div><!-- /.mainnav -->
+
+        <div class="content">
+            <div class="container">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div><!-- /.container -->
+        </div><!-- .content -->
+    </div><!-- /#wrapper -->
+    <footer class="footer">
+        <div class="container">
+            <p class="pull-left">Copyright &copy; <%= DateTime.Now.Year.ToString() %> SiteSteam, LLC.</p>
+        </div>
+    </footer>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Modal" runat="server">
+    <!-- MODAL -->
+    <div class="modal modal-styled fade" id="mainModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+                    <h4 class="modal-title">Loading...</h4>
+                </div><!-- /.modal-header -->
+                <div class="modal-body">
+                    <div class="iframe-wrapper">
+                        <iframe src="<%= RelativePath %>/_Misc/Loading.aspx" style="zoom:0.60" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                </div><!-- /.modal-body -->
+                <div class="modal-footer">
+                    <div style="float:left">
+                        <span id="ModalBottomLeft"></span>
+                    </div>
+                    <div style="float:right">
+                        <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                        <button class="btn btn-primary" type="button">Save changes</button>
+                    </div>
+                </div><!-- /.modal-footer -->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ScriptContent" runat="server">
+    <asp:ContentPlaceHolder ID="ScriptContent" runat="server" />
+</asp:Content>

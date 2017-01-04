@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_Masters/Site.master" AutoEventWireup="true" CodeBehind="interior.master.cs" Inherits="Presentation.Web._Masters.interior" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"/>
+    <!-- SWEET ALERT-->
+    <link rel="stylesheet" href="<%= master.RelativePath %>/vendor/sweetalert/dist/sweetalert.css">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="BannerContent" runat="server">
+    <div class="container">
+        <h1 class="masthead-subtitle">
+            <asp:ContentPlaceHolder ID="TitleContent" runat="server"/>
+        </h1>
+    </div>
+    <!-- /.container -->
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="BeforeContent" runat="server">
+    <asp:ContentPlaceHolder ID="BeforeContent" runat="server"/>
+    <div class="modal fade" id="mainModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+                    <h3 class="modal-title">Loading...</h3>
+                </div><!-- /.modal-header -->
+                <div class="modal-body">
+                    <iframe src="<%= master.RelativePath %>/Loading.aspx" style="zoom:0.60" frameborder="0" scrolling="no" height="350" width="99.6%"></iframe>
+                </div><!-- /.modal-body -->
+                <div class="modal-footer">
+                    <div style="float:left">
+                        <span id="ModalBottomLeft"></span>
+                    </div>
+                    <div style="float:right">
+                        <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                        <a class="btn btn-primary btn-register" target="_blank">Register</a>
+                    </div>
+                </div><!-- /.modal-footer -->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="container">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+    </div>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="AfterContent" runat="server">
+    <div class="content advertisement">
+        <div class="container">
+            <ss:advertisement ID="Advertisement1" runat="server" />
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="ScriptContent" runat="server">
+    <asp:ContentPlaceHolder ID="ScriptContent" runat="server"/>
+    <!-- SWEET ALERT-->
+    <script src="<%= master.RelativePath %>/vendor/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        jQuery(window).load(function () {
+            var upcoming = parseInt('<%= Upcoming %>');
+            try {
+                if (upcoming > 0) {
+                    swal({
+                        title: "Registration Now Open!",
+                        text: "There are " + upcoming + " upcoming leagues available for registration.",
+                        type: "success",
+                        showCancelButton: true,
+                        confirmButtonColor: "#d74b4b",
+                        confirmButtonText: "Register Now",
+                        cancelButtonText: "Close"
+                    },
+                    function () {
+                        var target = $('#myTab2 a[href="#upcoming"]');
+                        target.tab('show');
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        }
+                    });
+                }
+            }
+            catch (ex) {
+                alert(ex);
+            }
+        });
+    </script>
+</asp:Content>

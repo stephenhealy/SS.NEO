@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Top.master.cs" Inherits="Presentation.CMS._Masters.Top" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <title></title>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="author" content="SiteSteam LLC" />
+
+        <!-- =========================
+         STYLESHEETS   
+        ============================== -->
+        <asp:PlaceHolder ID="PlaceHolder1" runat="server">
+            <!-- Google Font: Open Sans -->
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,300,700" />
+
+            <!-- Font Awesome CSS -->
+            <link rel="stylesheet" href="<%= RelativePath %>/vendor/fontawesome/css/font-awesome.min.css" />
+
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="<%= RelativePath %>/vendor/bootstrap/dist/css/bootstrap.min.css" />
+
+            <link rel="stylesheet" href="<%= RelativePath %>/css/theme.css?v=1" />
+            <link rel="stylesheet" href="<%= RelativePath %>/css/forms.css?v=1" />
+            <link rel="stylesheet" href="<%= RelativePath %>/css/main.css?v=1" />
+            <link rel="stylesheet" href="<%= RelativePath %>/css/responsive.css?v=1" />
+            <link rel="stylesheet" href="<%= RelativePath %>/css/custom.css?v=1" />
+            <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+
+            <!-- Favicon -->
+            <link rel="shortcut icon" href="favicon.ico" />
+
+            <script>
+                var arrLoad = [];
+                function CodeBlock(execute) {
+                    this.exec = execute;
+                }
+            </script>
+            <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!--[if lt IE 9]>
+            <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+        </asp:PlaceHolder>
+    </head>
+    <body class="<%= BodyClass %>">
+        <form id="form1" runat="server">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </form>
+        <asp:ContentPlaceHolder ID="Modal" runat="server" />
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+        <!-- SCRIPTS -->
+        <script>
+            var RelativePath = '<%= RelativePath %>';
+        </script>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Core JS -->
+        <script src="<%= RelativePath %>/vendor/jquery/dist/jquery.js"></script>
+        <script src="<%= RelativePath %>/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- App JS -->
+        <script src="<%= RelativePath %>/js/Models.js"></script>
+        <script src="<%= RelativePath %>/js/helpers.js"></script>
+        <script src="<%= RelativePath %>/js/theme.js"></script>
+        <asp:ContentPlaceHolder ID="ScriptContent" runat="server"/>
+        <script src="<%= RelativePath %>/js/main.js?v=2"></script>
+        <script src="<%= RelativePath %>/js/onload.js"></script>
+    </body>
+</html>

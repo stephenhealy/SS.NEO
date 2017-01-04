@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Top.master.cs" Inherits="Presentation.Web._Masters.Top" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <title id="pageTitle" runat="server">Western Star Trucks</title>
+        <asp:PlaceHolder id="MetaPlaceHolder" runat="server" />	
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="author" content="SiteSteam LLC" />
+
+        <!-- =========================
+         STYLESHEETS   
+        ============================== -->
+        <asp:PlaceHolder runat="server">
+            <!-- Google Font: Open Sans -->
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,300,700" />
+
+            <!-- Font Awesome CSS -->
+            <link rel="stylesheet" href="<%= RelativePath %>/vendor/fontawesome/css/font-awesome.min.css" />
+
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="<%= RelativePath %>/vendor/bootstrap/dist/css/bootstrap.min.css" />
+
+            <link rel="stylesheet" href="<%= RelativePath %>/css/theme.css" />
+            <link rel="stylesheet" href="<%= RelativePath %>/css/forms.css" />
+            <link rel="stylesheet" href="<%= RelativePath %>/css/main.css?v=2" />
+            <link rel="stylesheet" href="<%= RelativePath %>/css/responsive.css" />
+            <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+
+            <link rel="shortcut icon" href="favicon.ico" />
+        </asp:PlaceHolder>
+    </head>
+    <body class="<%= BodyClass %>">
+        <!-- Google Tracking -->
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-80038828-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+        <!-- /Google Tracking -->
+        <form id="form1" runat="server">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </form>
+        <!-- SCRIPTS -->
+        <script>
+            var RelativePath = '<%= RelativePath %>';
+        </script>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Core JS -->
+        <script src="<%= RelativePath %>/vendor/jquery/dist/jquery.js"></script>
+        <script src="<%= RelativePath %>/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyA9wZHt-Gn2K7C1_IxpshALUqldHdfq2S8"></script>
+        <script src="http://preview.oklerthemes.com/porto/4.1.0/vendor/jquery.gmap/jquery.gmap.js"></script>
+        <!-- App JS -->
+        <script src="<%= RelativePath %>/js/core.js"></script>
+        <script src="<%= RelativePath %>/js/helpers.js"></script>
+        <script src="<%= RelativePath %>/js/landing.js"></script>
+        <asp:ContentPlaceHolder ID="ScriptContent" runat="server"/>
+        <script src="<%= RelativePath %>/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_Masters/interior.master" AutoEventWireup="true" CodeBehind="players.master.cs" Inherits="Presentation.Web._Masters.players" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"/>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="TitleContent" runat="server">
+    Player's Connection
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="BeforeContent" runat="server">
+    <asp:ContentPlaceHolder ID="BeforeContent" runat="server"/>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:PlaceHolder ID="phSave" runat="server" Visible="false">
+        <div role="alert" class="alert alert-success">
+            <a class="close" data-dismiss="alert" href="#" aria-hidden="true">×</a>
+            <strong>Great!</strong> Your information has been saved.
+        </div>
+    </asp:PlaceHolder>
+    <asp:PlaceHolder ID="phError" runat="server" Visible="false">
+        <div role="alert" class="alert alert-danger">
+            <strong>Oops!</strong> <asp:Literal ID="litError" runat="server" />
+        </div>
+    </asp:PlaceHolder>
+
+    <!-- WELCOME -->
+    <asp:PlaceHolder ID="phWelcome" runat="server" Visible="false">
+        <div class="row">
+            <div class="col-md-12">
+                <asp:Panel ID="panHome" runat="server" CssClass="pull-left">
+                    <a href="<%= master.RelativePath %>/Players"><em class="fa fa-reply fa-lg"></em> Return to the Main Menu</a>
+                </asp:Panel>
+                <div class="pull-right">
+                    Welcome, <asp:HyperLink ID="Username" CssClass="text-inverse" runat="server" NavigateUrl="~/Players/Profile" /> <a href="<%= master.RelativePath %>/Players/Logout" class="btn btn-inverse btn-sm" style="margin-left: 10px" onclick="return confirm('Are you sure you want to log out?');">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </asp:PlaceHolder>
+
+    <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+    <asp:ValidationSummary id="sumSave" HeaderText="The following errors were found:" ShowMessageBox="false" ShowSummary="false" DisplayMode="BulletList" runat="server" ValidationGroup="valSave" />
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="ScriptContent" runat="server">
+    <asp:ContentPlaceHolder ID="ScriptContent" runat="server"/>
+</asp:Content>
