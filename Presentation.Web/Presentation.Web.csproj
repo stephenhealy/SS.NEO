@@ -45,7 +45,7 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\EntityFramework.dll</HintPath>
+      <HintPath>__DLLs\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Runtime.Serialization" />
@@ -126,7 +126,7 @@
     <Content Include="Basketball\Lessons\Default.aspx" />
     <Content Include="Basketball\Tournaments\Default.aspx" />
     <Content Include="Basketball\Youth\Default.aspx" />
-    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="__DLLs\EntityFramework.dll" />
     <Content Include="Bocce\Leagues\Default.aspx" />
     <Content Include="Bocce\Tournaments\Default.aspx" />
     <Content Include="Browser.asmx" />
@@ -1123,7 +1123,9 @@
       <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
