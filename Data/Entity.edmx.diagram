@@ -27,7 +27,6 @@
         <EntityTypeShape EntityType="DBModel.Seeking" Width="1.5" PointX="10.799943269602927" PointY="13.895220673594261" />
         <EntityTypeShape EntityType="DBModel.PositionMember" Width="1.5" PointX="9.5478997237737762" PointY="8.1395245232337743" />
         <EntityTypeShape EntityType="DBModel.EventRegistration" Width="1.5" PointX="2.4499213949078325" PointY="27.30668066223463" />
-        <EntityTypeShape EntityType="DBModel.Sponsor" Width="1.5" PointX="5.9953860947840782" PointY="9.7389401391795563" />
         <EntityTypeShape EntityType="DBModel.Setting" Width="1.5" PointX="7.2943040539018362" PointY="24.014264430857388" />
         <EntityTypeShape EntityType="DBModel.League" Width="1.5" PointX="2.8882921202519407" PointY="0.35093672589908204" />
         <EntityTypeShape EntityType="DBModel.Clinic" Width="1.5" PointX="11.63414670137416" PointY="12.990094980686015" />
@@ -39,6 +38,8 @@
         <EntityTypeShape EntityType="DBModel.Advertisement" Width="1.5" PointX="0.438411181996768" PointY="8.1615117230273366" />
         <EntityTypeShape EntityType="DBModel.Bocce" Width="1.5" PointX="2.7576206190314241" PointY="20.927521089523808" />
         <EntityTypeShape EntityType="DBModel.Sidebar" Width="1.5" PointX="11.362066900060544" PointY="16.114126853697993" />
+        <EntityTypeShape EntityType="DBModel.Sponsor" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DBModel.HallOfFame" Width="1.5" PointX="9.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

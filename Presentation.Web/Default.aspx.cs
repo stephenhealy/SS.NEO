@@ -24,6 +24,15 @@ namespace Presentation.Web
 
             rptNews.DataSource = master.db.News.Where(o => o.Enabled && o.Deleted == false).OrderBy(o => o.Display).ToList();
             rptNews.DataBind();
+
+            Data.Sponsor featured = master.db.Sponsors.FirstOrDefault(o => o.Featured && o.Enabled && o.Deleted == false);
+            if (featured != null)
+            {
+                phFeatured.Visible = true;
+                imgFeatured.AlternateText = imgFeatured.ToolTip = hypFeatured.ToolTip = featured.Name;
+                imgFeatured.ImageUrl = master.RelativePath + featured.Advertisement;
+                hypFeatured.NavigateUrl = master.RelativePath + "/Sponsor.aspx?f=" + Statics.encryptQueryString(featured.AssetID.ToString());
+            }
         }
     }
 }

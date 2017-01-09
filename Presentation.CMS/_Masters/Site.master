@@ -27,6 +27,9 @@
                                     <a href="<%= master.RelativePath %>/_Repeat/Content/Advertisements.aspx"><i class="fa fa-mouse-pointer dropdown-icon"></i> Advertisements</a>
                                 </li>
                                 <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Content/HallOfFame.aspx"><i class="fa fa-university dropdown-icon"></i> Hall Of Fame</a>
+                                </li>
+                                <li>
                                     <a href="<%= master.RelativePath %>/_Repeat/Content/Carousel.aspx"><i class="fa fa-film dropdown-icon"></i> Home Carousel</a>
                                 </li>
                                 <li>

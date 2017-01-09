@@ -150,13 +150,60 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">Events <i class="fa fa-caret-down navbar-caret"></i></a>
+                            <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">Performance <i class="fa fa-caret-down navbar-caret"></i></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
-                                    <a href="<%= RelativePath%>/Events/"><i class="fa fa-angle-double-right dropdown-icon"></i> Upcoming & Recent</a>
+                                    <a href="<%= RelativePath%>/Performance/"><i class="fa fa-angle-double-right dropdown-icon"></i> Overview</a>
                                 </li>
                                 <li>
-                                    <a href="<%= RelativePath%>/Events/Host/"><i class="fa fa-angle-double-right dropdown-icon"></i> Host an Event</a>
+                                    <a href="<%= RelativePath%>/Performance/About/"><i class="fa fa-angle-double-right dropdown-icon"></i> About Us</a>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" href="javascript:void;">
+                                        <i class="fa fa-angle-double-right dropdown-icon "></i> 
+                                        Strength & Conditioning
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="<%= RelativePath%>/Performance/Training/">
+                                                Training
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<%= RelativePath%>/Performance/Training/Resistance/">
+                                                Resistance Training
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<%= RelativePath%>/Performance/Training/Speed/">
+                                                Speed Training
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<%= RelativePath%>/Performance/Training/Agility/">
+                                                Agility Training
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<%= RelativePath%>/Performance/Training/Auxiliary/">
+                                                Auxiliary Lifts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<%= RelativePath%>/Performance/Training/Stretching/">
+                                                Stretching
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Performance/Articles/"><i class="fa fa-angle-double-right dropdown-icon"></i> Articles</a>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Performance/HallOfFame/"><i class="fa fa-angle-double-right dropdown-icon"></i> Hall of Fame</a>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Performance/FAQs/"><i class="fa fa-angle-double-right dropdown-icon"></i> FAQs</a>
                                 </li>
                             </ul>
                         </li>
@@ -169,8 +216,19 @@
                                 <li>
                                     <a href="<%= RelativePath%>/Facility/Rental/"><i class="fa fa-angle-double-right dropdown-icon"></i> Court Rental</a>
                                 </li>
-                                <li>
-                                    <a href="<%= RelativePath%>/Facility/Training/"><i class="fa fa-angle-double-right dropdown-icon"></i> Training</a>
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" href="javascript:void;">
+                                        <i class="fa fa-angle-double-right dropdown-icon "></i> 
+                                        Events
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="<%= RelativePath%>/Events/"> Upcoming & Recent</a>
+                                        </li>
+                                        <li>
+                                            <a href="<%= RelativePath%>/Events/Host/"> Host an Event</a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>

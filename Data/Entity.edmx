@@ -4,48 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="DBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityContainer Name="DBModelStoreContainer">
-          <EntitySet Name="AdvertisementClicks" EntityType="DBModel.Store.AdvertisementClicks" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Advertisements" EntityType="DBModel.Store.Advertisements" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Assets" EntityType="DBModel.Store.Assets" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Bocce" EntityType="DBModel.Store.Bocce" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Carousel" EntityType="DBModel.Store.Carousel" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Clinics" EntityType="DBModel.Store.Clinics" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="EventLog" EntityType="DBModel.Store.EventLog" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="EventRegistration" EntityType="DBModel.Store.EventRegistration" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Events" EntityType="DBModel.Store.Events" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Keys" EntityType="DBModel.Store.Keys" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Leagues" EntityType="DBModel.Store.Leagues" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Lessons" EntityType="DBModel.Store.Lessons" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="LessonsRegister" EntityType="DBModel.Store.LessonsRegister" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Log" EntityType="DBModel.Store.Log" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="LogDetails" EntityType="DBModel.Store.LogDetails" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="News" EntityType="DBModel.Store.News" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PhotoAlbums" EntityType="DBModel.Store.PhotoAlbums" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PhotoCategories" EntityType="DBModel.Store.PhotoCategories" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Photos" EntityType="DBModel.Store.Photos" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Players" EntityType="DBModel.Store.Players" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PositionMembers" EntityType="DBModel.Store.PositionMembers" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Positions" EntityType="DBModel.Store.Positions" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Seeking" EntityType="DBModel.Store.Seeking" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Sessions" EntityType="DBModel.Store.Sessions" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Settings" EntityType="DBModel.Store.Settings" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Sidebar" EntityType="DBModel.Store.Sidebar" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Sponsors" EntityType="DBModel.Store.Sponsors" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Sports" EntityType="DBModel.Store.Sports" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="SubscriptionMembers" EntityType="DBModel.Store.SubscriptionMembers" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Subscriptions" EntityType="DBModel.Store.Subscriptions" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="SubscriptionTypes" EntityType="DBModel.Store.SubscriptionTypes" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Testimonials" EntityType="DBModel.Store.Testimonials" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Tournaments" EntityType="DBModel.Store.Tournaments" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Users" EntityType="DBModel.Store.Users" store:Type="Tables" Schema="dbo" />
-        </EntityContainer>
+    <Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AdvertisementClicks">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="AdvertisementID" Type="int" Nullable="false" />
           <Property Name="IPAddress" Type="varchar" MaxLength="15" />
           <Property Name="Created" Type="datetime" Nullable="false" />
@@ -72,7 +36,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CreatedBy" Type="int" Nullable="false" />
           <Property Name="CreatedOn" Type="datetime" Nullable="false" />
         </EntityType>
@@ -122,7 +86,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Event" Type="varchar" MaxLength="30" />
           <Property Name="Message" Type="varchar(max)" />
           <Property Name="Error" Type="bit" Nullable="false" />
@@ -159,11 +123,26 @@
           <Property Name="Enabled" Type="bit" Nullable="false" />
           <Property Name="Deleted" Type="bit" Nullable="false" />
         </EntityType>
+        <EntityType Name="HallOfFames">
+          <Key>
+            <PropertyRef Name="AssetID" />
+          </Key>
+          <Property Name="AssetID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Location" Type="varchar" MaxLength="100" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="Image" Type="varchar" MaxLength="100" />
+          <Property Name="Facebook" Type="varchar" MaxLength="100" />
+          <Property Name="Twitter" Type="varchar" MaxLength="100" />
+          <Property Name="Featured" Type="bit" Nullable="false" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="Keys">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="val" Type="varchar" MaxLength="100" />
           <Property Name="created" Type="datetime" />
           <Property Name="deleted" Type="datetime" />
@@ -222,7 +201,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Key" Type="varchar" MaxLength="30" />
           <Property Name="AssetID" Type="int" Nullable="false" />
           <Property Name="Latest" Type="bit" Nullable="false" />
@@ -233,7 +212,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="LogID" Type="int" Nullable="false" />
           <Property Name="Field" Type="varchar" MaxLength="100" />
           <Property Name="Was" Type="varchar(max)" />
@@ -308,7 +287,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="SeekingID" Type="int" Nullable="false" />
           <Property Name="PlayerID" Type="int" Nullable="false" />
           <Property Name="PositionID" Type="int" Nullable="false" />
@@ -330,7 +309,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="PlayerID" Type="int" Nullable="false" />
           <Property Name="Team" Type="varchar" MaxLength="50" />
           <Property Name="Description" Type="varchar(max)" />
@@ -379,7 +358,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="SportID" Type="int" Nullable="false" />
           <Property Name="Alt" Type="varchar" MaxLength="50" />
           <Property Name="Image" Type="varchar" MaxLength="100" />
@@ -401,6 +380,11 @@
           <Property Name="Zip" Type="varchar" MaxLength="10" />
           <Property Name="Phone" Type="varchar" MaxLength="15" />
           <Property Name="Description" Type="varchar(max)" />
+          <Property Name="Featured" Type="bit" Nullable="false" />
+          <Property Name="Advertisement" Type="varchar" MaxLength="100" />
+          <Property Name="Link" Type="varchar" MaxLength="100" />
+          <Property Name="Total" Type="int" Nullable="false" />
+          <Property Name="Last" Type="datetime" />
           <Property Name="Display" Type="int" Nullable="false" />
           <Property Name="Enabled" Type="bit" Nullable="false" />
           <Property Name="Deleted" Type="bit" Nullable="false" />
@@ -419,7 +403,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="SubscriptionID" Type="int" Nullable="false" />
           <Property Name="TypeID" Type="int" Nullable="false" />
           <Property Name="Created" Type="datetime" Nullable="false" />
@@ -429,7 +413,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="100" />
           <Property Name="Created" Type="datetime" />
         </EntityType>
@@ -497,6 +481,43 @@
           <Property Name="Enabled" Type="bit" Nullable="false" />
           <Property Name="Deleted" Type="bit" Nullable="false" />
         </EntityType>
+        <EntityContainer Name="DBModelStoreContainer">
+          <EntitySet Name="AdvertisementClicks" EntityType="Self.AdvertisementClicks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Advertisements" EntityType="Self.Advertisements" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Assets" EntityType="Self.Assets" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bocce" EntityType="Self.Bocce" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Carousel" EntityType="Self.Carousel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Clinics" EntityType="Self.Clinics" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EventLog" EntityType="Self.EventLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EventRegistration" EntityType="Self.EventRegistration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Events" EntityType="Self.Events" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HallOfFames" EntityType="Self.HallOfFames" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Keys" EntityType="Self.Keys" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Leagues" EntityType="Self.Leagues" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Lessons" EntityType="Self.Lessons" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LessonsRegister" EntityType="Self.LessonsRegister" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LogDetails" EntityType="Self.LogDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PhotoAlbums" EntityType="Self.PhotoAlbums" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PhotoCategories" EntityType="Self.PhotoCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Photos" EntityType="Self.Photos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Players" EntityType="Self.Players" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PositionMembers" EntityType="Self.PositionMembers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Positions" EntityType="Self.Positions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Seeking" EntityType="Self.Seeking" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sessions" EntityType="Self.Sessions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Settings" EntityType="Self.Settings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sidebar" EntityType="Self.Sidebar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sponsors" EntityType="Self.Sponsors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sports" EntityType="Self.Sports" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SubscriptionMembers" EntityType="Self.SubscriptionMembers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Subscriptions" EntityType="Self.Subscriptions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SubscriptionTypes" EntityType="Self.SubscriptionTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Testimonials" EntityType="Self.Testimonials" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tournaments" EntityType="Self.Tournaments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -524,7 +545,6 @@
           <EntitySet Name="Seekings" EntityType="DBModel.Seeking" />
           <EntitySet Name="PositionMembers" EntityType="DBModel.PositionMember" />
           <EntitySet Name="EventRegistrations" EntityType="DBModel.EventRegistration" />
-          <EntitySet Name="Sponsors" EntityType="DBModel.Sponsor" />
           <EntitySet Name="Settings" EntityType="DBModel.Setting" />
           <EntitySet Name="Leagues" EntityType="DBModel.League" />
           <EntitySet Name="Clinics" EntityType="DBModel.Clinic" />
@@ -536,6 +556,8 @@
           <EntitySet Name="Advertisements" EntityType="DBModel.Advertisement" />
           <EntitySet Name="Bocces" EntityType="DBModel.Bocce" />
           <EntitySet Name="Sidebars" EntityType="DBModel.Sidebar" />
+          <EntitySet Name="Sponsors" EntityType="DBModel.Sponsor" />
+          <EntitySet Name="HallOfFames" EntityType="DBModel.HallOfFame" />
         </EntityContainer>
         <EntityType Name="Asset">
           <Key>
@@ -826,24 +848,6 @@
           <Property Type="DateTime" Name="Scheduled" Nullable="false" Precision="3" />
           <Property Type="Boolean" Name="Deleted" Nullable="false" />
         </EntityType>
-        <EntityType Name="Sponsor">
-          <Key>
-            <PropertyRef Name="AssetID" />
-          </Key>
-          <Property Type="Int32" Name="AssetID" Nullable="false" />
-          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Logo" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Web" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="State" MaxLength="2" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Zip" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Phone" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="Display" Nullable="false" />
-          <Property Type="Boolean" Name="Enabled" Nullable="false" />
-          <Property Type="Boolean" Name="Deleted" Nullable="false" />
-        </EntityType>
         <EntityType Name="Setting">
           <Key>
             <PropertyRef Name="AssetID" />
@@ -992,6 +996,44 @@
           <Property Type="Int32" Name="Display" Nullable="false" />
           <Property Type="Boolean" Name="Enabled" Nullable="false" />
           <Property Type="Boolean" Name="Deleted" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sponsor">
+          <Key>
+            <PropertyRef Name="AssetID" />
+          </Key>
+          <Property Name="AssetID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Logo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Web" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Zip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Featured" Type="Boolean" Nullable="false" />
+          <Property Name="Advertisement" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Link" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Total" Type="Int32" Nullable="false" />
+          <Property Name="Last" Type="DateTime" Precision="3" />
+          <Property Name="Display" Type="Int32" Nullable="false" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HallOfFame">
+          <Key>
+            <PropertyRef Name="AssetID" />
+          </Key>
+          <Property Name="AssetID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Facebook" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Twitter" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Featured" Type="Boolean" Nullable="false" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -1310,25 +1352,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Sponsors">
-            <EntityTypeMapping TypeName="DBModel.Sponsor">
-              <MappingFragment StoreEntitySet="Sponsors">
-                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
-                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
-                <ScalarProperty Name="Display" ColumnName="Display" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="Zip" ColumnName="Zip" />
-                <ScalarProperty Name="State" ColumnName="State" />
-                <ScalarProperty Name="City" ColumnName="City" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="Web" ColumnName="Web" />
-                <ScalarProperty Name="Logo" ColumnName="Logo" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="AssetID" ColumnName="AssetID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Settings">
             <EntityTypeMapping TypeName="DBModel.Setting">
               <MappingFragment StoreEntitySet="Settings">
@@ -1489,6 +1512,46 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Sponsors">
+            <EntityTypeMapping TypeName="DBModel.Sponsor">
+              <MappingFragment StoreEntitySet="Sponsors">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="Display" ColumnName="Display" />
+                <ScalarProperty Name="Last" ColumnName="Last" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Advertisement" ColumnName="Advertisement" />
+                <ScalarProperty Name="Featured" ColumnName="Featured" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Web" ColumnName="Web" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AssetID" ColumnName="AssetID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HallOfFames">
+            <EntityTypeMapping TypeName="DBModel.HallOfFame">
+              <MappingFragment StoreEntitySet="HallOfFames">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="Featured" ColumnName="Featured" />
+                <ScalarProperty Name="Twitter" ColumnName="Twitter" />
+                <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AssetID" ColumnName="AssetID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -1506,6 +1569,7 @@
         <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

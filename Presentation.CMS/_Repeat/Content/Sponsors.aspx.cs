@@ -21,6 +21,7 @@ namespace Presentation.CMS._Repeat.Content
                 master.Heading.Text = "Sponsors";
             master.LoggingKey = LoggingKeys.Sponsors;
             btnLogo.Attributes.Add("data-control", txtLogo.ClientID);
+            btnAdvertisement.Attributes.Add("data-control", txtAdvertisement.ClientID);
         }
 
         public object Json(bool trash)
@@ -43,6 +44,11 @@ namespace Presentation.CMS._Repeat.Content
                 txtZip.Text = item.Zip;
                 txtPhone.Text = item.Phone;
                 txtDescription.Text = item.Description;
+                chkFeatured.Checked = item.Featured;
+                txtAdvertisement.Text = item.Advertisement;
+                txtLink.Text = item.Link;
+                litTimes.Text = item.Total.ToString();
+                litLast.Text = Statics.DateTimeToString(item.Last, Models.ParseDateTimeType.LongDateTime, master.User.TimeZone);
                 chkEnabled.Checked = item.Enabled;
                 if (item.Deleted)
                     master.HideSave();
@@ -67,7 +73,17 @@ namespace Presentation.CMS._Repeat.Content
             item.State = txtState.Text.ToUpper();
             item.Zip = txtZip.Text;
             item.Phone = Statics.ClearPhone(txtPhone.Text);
-            item.Description = txtDescription.Text;
+            if (chkFeatured.Checked)
+            {
+                List<Data.Sponsor> featured = master.db.Sponsors.Where(x => x.Deleted == false).ToList();
+                for (int ii = 1; ii <= featured.Count; ii++)
+                    featured[ii - 1].Featured = false;
+                item.Featured = true;
+            }
+            else
+                item.Featured = false;
+            item.Advertisement = txtAdvertisement.Text;
+            item.Link = txtLink.Text;
             if (item.Display == 0)
             {
                 List<Data.Sponsor> order = master.db.Sponsors.Where(x => x.Deleted == false).ToList();

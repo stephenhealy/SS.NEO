@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
 
 namespace Presentation.CMS._Masters
 {
@@ -23,6 +24,20 @@ namespace Presentation.CMS._Masters
                 ImagePath = ConfigurationManager.AppSettings["ImagePath"];
                 WebServiceURL = ConfigurationManager.AppSettings["WebServiceURL"];
                 WebSiteURL = ConfigurationManager.AppSettings["WebSiteURL"];
+
+                string DataDirectory = ConfigurationManager.AppSettings["DataDirectory"];
+                // Check to see if we need to change the defualt data directory for the datbase (if local and shared in project)
+                if (String.IsNullOrEmpty(DataDirectory) == false)
+                {
+                    string BinDirectory = System.Reflection.Assembly.GetExecutingAssembly().CodeBase;
+                    BinDirectory = BinDirectory.Substring(0, BinDirectory.LastIndexOf("/bin", StringComparison.InvariantCultureIgnoreCase));
+                    BinDirectory = BinDirectory.Substring(0, BinDirectory.LastIndexOf("/", StringComparison.InvariantCultureIgnoreCase));
+                    BinDirectory = BinDirectory.Replace("file:///", string.Empty);
+                    while (BinDirectory.Contains("/"))
+                        BinDirectory = BinDirectory.Replace("/", "\\");
+                    string AbsoluteDataDirectory = Path.GetFullPath(BinDirectory + DataDirectory);
+                    AppDomain.CurrentDomain.SetData("DataDirectory", AbsoluteDataDirectory);
+                }
 
                 db = new DB();
                 User = new UserProfile(db);

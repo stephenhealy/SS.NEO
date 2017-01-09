@@ -21,7 +21,7 @@
                         <h4><%# DataBinder.Eval(Container.DataItem, "Name") %></h4>
                         <ul class="list-inline">
                             <li><i class="fa fa-phone text-warning"></i> <span class="text-warning"><%# Models.Statics.FormatPhone(DataBinder.Eval(Container.DataItem, "Phone")) %></span></li>
-                            <li><i class="fa fa-globe text-success"></i> <a class="text-success" href="<%# DataBinder.Eval(Container.DataItem, "Web") %>" target="_blank"><%# DataBinder.Eval(Container.DataItem, "Web") %></a></li>
+                            <li><i class="fa fa-globe text-success"></i> <a class="text-success" href='<%# master.RelativePath + "/Sponsor.aspx?i=" + Models.Statics.encryptQueryString(DataBinder.Eval(Container.DataItem, "AssetID").ToString()) %>' target="_blank"><%# DataBinder.Eval(Container.DataItem, "Web") %></a></li>
                         </ul>
                         <p><%# Models.Statics.TextToHtml(DataBinder.Eval(Container.DataItem, "Description"), false) %></p>
                         <div style="letter-spacing: 1px; font-size: 0.9em; color: #999;">

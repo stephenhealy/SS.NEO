@@ -261,6 +261,7 @@ namespace Models
                 dictionary.Add(LoggingKeys.Clinics, "Name");
                 dictionary.Add(LoggingKeys.EventRegistration, "First|Last");
                 dictionary.Add(LoggingKeys.Events, "Title");
+                dictionary.Add(LoggingKeys.HallOfFame, "Name");
                 dictionary.Add(LoggingKeys.Leagues, "Name");
                 dictionary.Add(LoggingKeys.Lessons, "Name");
                 dictionary.Add(LoggingKeys.LessonsRegister, "First|Last");

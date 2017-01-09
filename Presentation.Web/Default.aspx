@@ -60,7 +60,7 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="MainContent" runat="server">
     <section class="home-section">
         <div class="container">
-<div class="layout layout-stack-sm layout-main-left">
+            <div class="layout layout-stack-sm layout-main-left">
                 <div class="col-sm-8 col-md-8 col-lg-9 layout-main">
                     <div class="heading-block heading-minimal heading-center">
                         <h1>Welcome to NEO Sports Plant</h1>
@@ -73,6 +73,20 @@
 	                <p class="">Sincerely,<br /><em>NEO Management</em></p>
                 </div><!-- /.col -->
                 <div class="col-sm-4 col-md-4 col-lg-3 layout-sidebar">
+                    <asp:PlaceHolder ID="phFeatured" runat="server" Visible="false">
+                        <div class="heading-block">
+                            <h4>Featured Sponsor</h4>
+                        </div>
+
+                        <div class="team-member" style="display: inline-block;">
+                            <div class="team-member-img">
+                                <asp:HyperLink ID="hypFeatured" runat="server" Target="_blank">
+                                    <asp:Image ID="imgFeatured" runat="server" ImageAlign="AbsMiddle" />
+                                </asp:HyperLink>
+                            </div>
+                        </div>
+                        <br class="xs-30">
+                    </asp:PlaceHolder>
                     <div class="heading-block">
                         <h4>Latest News</h4>
                     </div>

@@ -19,12 +19,14 @@ namespace Data
     }
     public class LoggingKeys
     {
+        // Also update Models.Common.LoadDictionary()
         public const string Advertisements = "Advertisements";
         public const string Bocce = "Bocce";
         public const string Carousel = "Carousel";
         public const string Clinics = "Clinics";
         public const string EventRegistration = "EventRegistration";
         public const string Events = "Events";
+        public const string HallOfFame = "HallOfFame";
         public const string Leagues = "Leagues";
         public const string Lessons = "Lessons";
         public const string LessonsRegister = "LessonsRegister";

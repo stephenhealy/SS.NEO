@@ -47,7 +47,6 @@ namespace Data
         public DbSet<Seeking> Seekings { get; set; }
         public DbSet<PositionMember> PositionMembers { get; set; }
         public DbSet<EventRegistration> EventRegistrations { get; set; }
-        public DbSet<Sponsor> Sponsors { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<League> Leagues { get; set; }
         public DbSet<Clinic> Clinics { get; set; }
@@ -59,5 +58,7 @@ namespace Data
         public DbSet<Advertisement> Advertisements { get; set; }
         public DbSet<Bocce> Bocces { get; set; }
         public DbSet<Sidebar> Sidebars { get; set; }
+        public DbSet<Sponsor> Sponsors { get; set; }
+        public DbSet<HallOfFame> HallOfFames { get; set; }
     }
 }

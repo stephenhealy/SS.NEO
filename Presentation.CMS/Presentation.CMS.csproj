@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="_Repeat\Content\HallOfFame.aspx" />
     <Content Include="__DLLs\EntityFramework.dll" />
     <Content Include="Browser.asmx" />
     <Content Include="css\browse.css" />
@@ -637,6 +638,13 @@
     </Compile>
     <Compile Include="_Repeat\Content\Photos.aspx.designer.cs">
       <DependentUpon>Photos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_Repeat\Content\HallOfFame.aspx.cs">
+      <DependentUpon>HallOfFame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Repeat\Content\HallOfFame.aspx.designer.cs">
+      <DependentUpon>HallOfFame.aspx</DependentUpon>
     </Compile>
     <Compile Include="_Repeat\System\Settings.aspx.cs">
       <DependentUpon>Settings.aspx</DependentUpon>

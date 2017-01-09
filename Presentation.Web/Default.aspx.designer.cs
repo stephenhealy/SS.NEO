@@ -31,6 +31,33 @@ namespace Presentation.Web {
         protected global::System.Web.UI.WebControls.Repeater rptCarousel;
         
         /// <summary>
+        /// phFeatured control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phFeatured;
+        
+        /// <summary>
+        /// hypFeatured control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hypFeatured;
+        
+        /// <summary>
+        /// imgFeatured control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgFeatured;
+        
+        /// <summary>
         /// rptNews control.
         /// </summary>
         /// <remarks>

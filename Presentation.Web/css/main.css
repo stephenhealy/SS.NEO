@@ -125,6 +125,59 @@ blockquote {
             font-weight: normal;
         }
 
+ul.default-list {
+    list-style-type: disc;
+}
+    ul.default-list li {
+        margin: 5px;
+    }
+
+ul.video-thumnails {
+    list-style: none;
+}
+    ul.video-thumnails li {
+        margin: 10px 0px;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+        ul.video-thumnails li img {
+            max-width: 250px;
+            webkit-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.50);
+            -moz-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.50);
+            box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.50);
+        }
+
+ul.leaders {
+    max-width: 45em;
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none;
+}
+    ul.leaders li {
+        margin: 5px;
+        position: relative;
+    }
+        ul.leaders li:before {
+            float: left;
+            width: 0;
+            white-space: nowrap;
+            content: ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . ";
+        }
+    ul.leaders span:first-child {
+        padding-right: 0.33em;
+        background: white;
+    }
+    ul.leaders span + span {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding-left: 0.33em;
+        background: white;
+    }
+
+.table th {
+    font-weight: 500 !important;
+}
 .pricing-table-content h5 {
     height: 25px;
 }

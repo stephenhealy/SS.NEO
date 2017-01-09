@@ -111,6 +111,9 @@
     <Compile Include="EventRegistration.cs">
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
+    <Compile Include="HallOfFame.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
     <Compile Include="HistoryList.cs" />
     <Compile Include="Key.cs">
       <DependentUpon>Entity.tt</DependentUpon>
@@ -175,6 +178,7 @@
     <Compile Include="Selector\Session.cs" />
     <Compile Include="Selector\Leagues.cs" />
     <Compile Include="Selector\Sports.cs" />
+    <Compile Include="Selector\HallOfFame.cs" />
     <Compile Include="Selector\Users.cs" />
     <Compile Include="Selector\Carousel.cs">
       <SubType>Code</SubType>

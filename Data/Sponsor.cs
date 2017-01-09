@@ -24,6 +24,11 @@ namespace Data
         public string Zip { get; set; }
         public string Phone { get; set; }
         public string Description { get; set; }
+        public bool Featured { get; set; }
+        public string Advertisement { get; set; }
+        public string Link { get; set; }
+        public int Total { get; set; }
+        public Nullable<System.DateTime> Last { get; set; }
         public int Display { get; set; }
         public bool Enabled { get; set; }
         public bool Deleted { get; set; }
