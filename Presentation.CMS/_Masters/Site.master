@@ -24,6 +24,9 @@
                             <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">Content <i class="mainnav-caret"></i></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
+                                    <a href="<%= master.RelativePath %>/_Repeat/Content/Blog.aspx"><i class="fa fa-rss dropdown-icon"></i> Blog</a>
+                                </li>
+                                <li>
                                     <a href="<%= master.RelativePath %>/_Repeat/Content/Advertisements.aspx"><i class="fa fa-mouse-pointer dropdown-icon"></i> Advertisements</a>
                                 </li>
                                 <li>

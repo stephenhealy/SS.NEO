@@ -257,6 +257,7 @@ namespace Models
             {
                 dictionary.Add(LoggingKeys.Advertisements, "Name");
                 dictionary.Add(LoggingKeys.Bocce, "Message");
+                dictionary.Add(LoggingKeys.Blog, "Title");
                 dictionary.Add(LoggingKeys.Carousel, "Title");
                 dictionary.Add(LoggingKeys.Clinics, "Name");
                 dictionary.Add(LoggingKeys.EventRegistration, "First|Last");
@@ -277,6 +278,7 @@ namespace Models
                 dictionary.Add(LoggingKeys.Testimonials, "Name");
                 dictionary.Add(LoggingKeys.Tournaments, "Name");
                 dictionary.Add(LoggingKeys.Users, "First|Last");
+                dictionary.Add(LoggingKeys.Volleyball, "Message");
             }
         }
 

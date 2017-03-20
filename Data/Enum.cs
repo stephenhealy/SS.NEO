@@ -19,14 +19,17 @@ namespace Data
     }
     public class LoggingKeys
     {
-        // Also update Models.Common.LoadDictionary()
+        // When adding, also update Models.Common.LoadDictionary()
+
+        // These need to match the table name
         public const string Advertisements = "Advertisements";
         public const string Bocce = "Bocce";
+        public const string Blog = "Blog";
         public const string Carousel = "Carousel";
         public const string Clinics = "Clinics";
         public const string EventRegistration = "EventRegistration";
         public const string Events = "Events";
-        public const string HallOfFame = "HallOfFame";
+        public const string HallOfFame = "HallOfFames";
         public const string Leagues = "Leagues";
         public const string Lessons = "Lessons";
         public const string LessonsRegister = "LessonsRegister";
@@ -42,5 +45,6 @@ namespace Data
         public const string Testimonials = "Testimonials";
         public const string Tournaments = "Tournaments";
         public const string Users = "Users";
+        public const string Volleyball = "Volleyball";
     }
 }

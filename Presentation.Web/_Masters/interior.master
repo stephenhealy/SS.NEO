@@ -68,8 +68,9 @@
                         cancelButtonText: "Close"
                     },
                     function () {
-                        var target = $('#myTab2 a[href="#upcoming"]');
-                        target.tab('show');
+                        //var target = $('#myTab2 a[href="#upcoming"]');
+                        //target.tab('show');
+                        var target = $("#upcoming");
                         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                         if (target.length) {
                             $('html,body').animate({

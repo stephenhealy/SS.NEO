@@ -202,6 +202,27 @@ namespace Models
         {
             return javascript.Replace("'", "\\'");
         }
+        public static string EllipseText(string text, int after)
+        {
+            int indexOfSpace = text.IndexOf(" ", after);
+            int indexOfPeriod = text.IndexOf(".", after);
+
+            if (indexOfSpace > -1)
+            {
+                if (indexOfSpace < indexOfPeriod)
+                    text = text.Substring(0, indexOfSpace) + "...";
+                else
+                    text = text.Substring(0, indexOfPeriod) + "...";
+            }
+            else if (indexOfPeriod > 0)
+            {
+                text = text.Substring(0, indexOfPeriod) + "...";
+            }
+            else
+                text = text.Substring(0, after) + "...";
+            return text;
+
+        }
         public static string TextToHtml(string text)
         {
             return TextToHtml(text, false);

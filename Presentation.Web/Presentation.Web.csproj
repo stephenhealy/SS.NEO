@@ -104,6 +104,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Daycamp\Default.aspx" />
+    <Content Include="Advertise\Default.aspx" />
+    <Content Include="Default.bak.aspx" />
+    <Content Include="Volleyball\Default.aspx" />
+    <Content Include="Wellness\Default.aspx" />
     <Content Include="Sponsor.aspx" />
     <Content Include="assets\css\color_scheme\blue.css" />
     <Content Include="assets\css\color_scheme\brown.css" />
@@ -235,7 +240,7 @@
     <Content Include="img\volleyball-molton.jpg" />
     <Content Include="img\volleyball-sand.jpg" />
     <Content Include="img\volleyball-sunset.jpg" />
-    <Content Include="index.html" />
+    <None Include="index.html.bak" />
     <Content Include="js\main.js" />
     <Content Include="js\map.js" />
     <Content Include="js\core.js" />
@@ -520,6 +525,34 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Daycamp\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Daycamp\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Advertise\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Advertise\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Volleyball\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volleyball\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wellness\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wellness\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Sponsor.aspx.cs">
       <DependentUpon>Sponsor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

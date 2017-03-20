@@ -166,15 +166,6 @@ namespace Presentation.CMS._Repeat.Content {
         protected global::System.Web.UI.WebControls.TextBox txtEZRegister;
         
         /// <summary>
-        /// RequiredFieldValidator9 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator9;
-        
-        /// <summary>
         /// txtEZSchedule control.
         /// </summary>
         /// <remarks>

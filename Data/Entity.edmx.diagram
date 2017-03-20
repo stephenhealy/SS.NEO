@@ -40,6 +40,8 @@
         <EntityTypeShape EntityType="DBModel.Sidebar" Width="1.5" PointX="11.362066900060544" PointY="16.114126853697993" />
         <EntityTypeShape EntityType="DBModel.Sponsor" Width="1.5" PointX="7.375" PointY="0.75" />
         <EntityTypeShape EntityType="DBModel.HallOfFame" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DBModel.Blog" Width="1.5" PointX="4.375" PointY="9.75" />
+        <EntityTypeShape EntityType="DBModel.Volleyball" Width="1.5" PointX="11.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

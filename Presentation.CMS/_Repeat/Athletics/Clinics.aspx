@@ -66,10 +66,9 @@
         </div>
     </div>
     <div class="form-group">
-        <label class="col-sm-2 control-label">EZRegister: *</label>
+        <label class="col-sm-2 control-label">EZRegister:</label>
         <div class="col-sm-10">
             <asp:TextBox ID="txtEZRegister" runat="server" CssClass="form-control" />
-            <asp:RequiredFieldValidator ControlToValidate="txtEZRegister" CssClass="validation-required validation-text" ValidationGroup="valSave" runat="server" ErrorMessage="" Text="" Display="Dynamic" SetFocusOnError="true" ID="RequiredFieldValidator9" /> 
         </div>
     </div>
     <div class="form-group">

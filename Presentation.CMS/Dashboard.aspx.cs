@@ -185,6 +185,11 @@ namespace Presentation.CMS
                 if (bocce != null)
                     txtBocce.Text = bocce.Message;
 
+                // Volleyball
+                Data.Volleyball volleyball = master.db.Volleyballs.FirstOrDefault(o => o.Deleted == false);
+                if (volleyball != null)
+                    txtVolleyball.Text = volleyball.Message;
+
                 // Recent Activity
                 List<HistoryList> items = (from all in master.db.Logs
                                            join _logUsers in master.db.Users on all.CreatedBy equals _logUsers.AssetID into tUsers
@@ -231,19 +236,34 @@ namespace Presentation.CMS
             return master.Common.ExecuteSelect(master.db, table, id);
         }
 
-        protected void btnBocce_Click(object sender, EventArgs e)
+        protected void btnCourts_Click(object sender, EventArgs e)
         {
+            // Bocce
             master.db.Bocces.Where(x => x.Deleted == false).ToList().ForEach(x => x.Deleted = true);
-            Data.Bocce item = new Bocce();
-            item.AssetID = Models.Asset.New(master.db, master.User.ID);
-            item.Message = txtBocce.Text;
-            item.Deleted = false;
-            master.db.Bocces.Add(item);
+            Data.Bocce bocce = new Bocce();
+            bocce.AssetID = Models.Asset.New(master.db, master.User.ID);
+            bocce.Message = txtBocce.Text;
+            bocce.Deleted = false;
+            master.db.Bocces.Add(bocce);
+            string errors = master.SaveChanges(LoggingKeys.Bocce, bocce.AssetID);
 
-            string errors = master.SaveChanges(LoggingKeys.Bocce, item.AssetID);
             // Check to make sure there are no errors.
-            if (String.IsNullOrEmpty(errors))
-                Sessions.Set(Sessions.Saved, "0");
+            if (String.IsNullOrEmpty(errors)) {
+                // Volleyball
+                master.db.Volleyballs.Where(x => x.Deleted == false).ToList().ForEach(x => x.Deleted = true);
+                Data.Volleyball volleyball = new Volleyball();
+                volleyball.AssetID = Models.Asset.New(master.db, master.User.ID);
+                volleyball.Message = txtVolleyball.Text;
+                volleyball.Deleted = false;
+                master.db.Volleyballs.Add(volleyball);
+                errors = master.SaveChanges(LoggingKeys.Volleyball, volleyball.AssetID);
+
+                // Check to make sure there are no errors.
+                if (String.IsNullOrEmpty(errors))
+                    Sessions.Set(Sessions.Saved, "0");
+                else
+                    Page.ClientScript.RegisterStartupScript(Page.GetType(), "errored", "NotifyError('" + Statics.EscapeSingleJS(errors) + "', null, 'The following error occurred...');", true);
+            }
             else
                 Page.ClientScript.RegisterStartupScript(Page.GetType(), "errored", "NotifyError('" + Statics.EscapeSingleJS(errors) + "', null, 'The following error occurred...');", true);
         }

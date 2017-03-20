@@ -40,6 +40,20 @@
           <Property Name="CreatedBy" Type="int" Nullable="false" />
           <Property Name="CreatedOn" Type="datetime" Nullable="false" />
         </EntityType>
+        <EntityType Name="Blog">
+          <Key>
+            <PropertyRef Name="AssetID" />
+          </Key>
+          <Property Name="AssetID" Type="int" Nullable="false" />
+          <Property Name="SportID" Type="int" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="100" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="Link" Type="varchar(max)" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Dated" Type="datetime" Nullable="false" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="Bocce">
           <Key>
             <PropertyRef Name="AssetID" />
@@ -481,10 +495,19 @@
           <Property Name="Enabled" Type="bit" Nullable="false" />
           <Property Name="Deleted" Type="bit" Nullable="false" />
         </EntityType>
+        <EntityType Name="Volleyball">
+          <Key>
+            <PropertyRef Name="AssetID" />
+          </Key>
+          <Property Name="AssetID" Type="int" Nullable="false" />
+          <Property Name="Message" Type="varchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
         <EntityContainer Name="DBModelStoreContainer">
           <EntitySet Name="AdvertisementClicks" EntityType="Self.AdvertisementClicks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Advertisements" EntityType="Self.Advertisements" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Assets" EntityType="Self.Assets" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Bocce" EntityType="Self.Bocce" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Carousel" EntityType="Self.Carousel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Clinics" EntityType="Self.Clinics" Schema="dbo" store:Type="Tables" />
@@ -517,6 +540,7 @@
           <EntitySet Name="Testimonials" EntityType="Self.Testimonials" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tournaments" EntityType="Self.Tournaments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Volleyball" EntityType="Self.Volleyball" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -558,6 +582,8 @@
           <EntitySet Name="Sidebars" EntityType="DBModel.Sidebar" />
           <EntitySet Name="Sponsors" EntityType="DBModel.Sponsor" />
           <EntitySet Name="HallOfFames" EntityType="DBModel.HallOfFame" />
+          <EntitySet Name="Blogs" EntityType="DBModel.Blog" />
+          <EntitySet Name="Volleyballs" EntityType="DBModel.Volleyball" />
         </EntityContainer>
         <EntityType Name="Asset">
           <Key>
@@ -1034,6 +1060,28 @@
           <Property Name="Featured" Type="Boolean" Nullable="false" />
           <Property Name="Enabled" Type="Boolean" Nullable="false" />
           <Property Name="Deleted" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Blog">
+          <Key>
+            <PropertyRef Name="AssetID" />
+          </Key>
+          <Property Name="AssetID" Type="Int32" Nullable="false" />
+          <Property Name="SportID" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Dated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Volleyball">
+          <Key>
+            <PropertyRef Name="AssetID" />
+          </Key>
+          <Property Name="AssetID" Type="Int32" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Deleted" Type="Boolean" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -1548,6 +1596,30 @@
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Location" ColumnName="Location" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AssetID" ColumnName="AssetID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Blogs">
+            <EntityTypeMapping TypeName="DBModel.Blog">
+              <MappingFragment StoreEntitySet="Blog">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="Dated" ColumnName="Dated" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="SportID" ColumnName="SportID" />
+                <ScalarProperty Name="AssetID" ColumnName="AssetID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Volleyballs">
+            <EntityTypeMapping TypeName="DBModel.Volleyball">
+              <MappingFragment StoreEntitySet="Volleyball">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
                 <ScalarProperty Name="AssetID" ColumnName="AssetID" />
               </MappingFragment>
             </EntityTypeMapping>

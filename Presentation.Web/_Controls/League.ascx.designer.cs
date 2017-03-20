@@ -13,15 +13,6 @@ namespace Presentation.Web._Controls {
     public partial class League {
         
         /// <summary>
-        /// lblCurrent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCurrent;
-        
-        /// <summary>
         /// lblUpcoming control.
         /// </summary>
         /// <remarks>
@@ -31,22 +22,13 @@ namespace Presentation.Web._Controls {
         protected global::System.Web.UI.WebControls.Label lblUpcoming;
         
         /// <summary>
-        /// rptCurrent control.
+        /// lblCurrent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptCurrent;
-        
-        /// <summary>
-        /// litCurrent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litCurrent;
+        protected global::System.Web.UI.WebControls.Label lblCurrent;
         
         /// <summary>
         /// rptUpcoming control.
@@ -65,5 +47,23 @@ namespace Presentation.Web._Controls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal litUpcoming;
+        
+        /// <summary>
+        /// rptCurrent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptCurrent;
+        
+        /// <summary>
+        /// litCurrent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litCurrent;
     }
 }

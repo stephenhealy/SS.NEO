@@ -76,6 +76,9 @@
     <Compile Include="Asset.cs">
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
+    <Compile Include="Blog.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Bocce.cs">
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
@@ -170,6 +173,7 @@
     <Compile Include="Selector\Testimonial.cs" />
     <Compile Include="Selector\Sponsor.cs" />
     <Compile Include="Selector\Photo.cs" />
+    <Compile Include="Selector\Blog.cs" />
     <Compile Include="Selector\Tournament.cs" />
     <Compile Include="Selector\LessonsRegister.cs" />
     <Compile Include="Selector\Lesson.cs" />
@@ -215,6 +219,9 @@
     </Compile>
     <Compile Include="TreeItem.cs" />
     <Compile Include="User.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Volleyball.cs">
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
   </ItemGroup>

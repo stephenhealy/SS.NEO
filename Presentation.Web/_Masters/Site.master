@@ -20,6 +20,12 @@
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">Volleyball <i class="fa fa-caret-down navbar-caret"></i></a>
                             <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="<%= RelativePath%>/Volleyball/">
+                                        <i class="fa fa-angle-double-right dropdown-icon "></i> 
+                                        Overview
+                                    </a>
+                                </li>
                                 <li class="dropdown-submenu">
                                     <a tabindex="-1" href="javascript:void;">
                                         <i class="fa fa-angle-double-right dropdown-icon "></i> 
@@ -152,7 +158,7 @@
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">Performance <i class="fa fa-caret-down navbar-caret"></i></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li>
+                                <li style="display:none">
                                     <a href="<%= RelativePath%>/Performance/"><i class="fa fa-angle-double-right dropdown-icon"></i> Overview</a>
                                 </li>
                                 <li>
@@ -249,6 +255,15 @@
                                 </li>
                                 <li>
                                     <a href="<%= RelativePath%>/Company/Contact/"><i class="fa fa-angle-double-right dropdown-icon"></i> Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Wellness/"><i class="fa fa-angle-double-right dropdown-icon"></i> Wellness</a>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Advertise/"><i class="fa fa-angle-double-right dropdown-icon"></i> Advertise</a>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Daycamp/"><i class="fa fa-angle-double-right dropdown-icon"></i> Daycamp</a>
                                 </li>
                             </ul>
                         </li>

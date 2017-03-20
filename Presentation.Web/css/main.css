@@ -63,6 +63,23 @@
     .masthead-carousel .carousel-indicators {
         bottom: 0px;
     }
+.masthead-carousel .carousel-control {
+      position: absolute;
+      top: 40%;
+  }
+.masthead-carousel .carousel-control {
+    width: 60px;
+    height: 60px;
+}
+.masthead-carousel .carousel-control .glyphicon {
+    font-size: 2.4em;
+}
+.masthead-carousel .carousel-control .glyphicon-chevron-left, 
+.masthead-carousel .carousel-control .glyphicon-chevron-right, 
+.masthead-carousel .carousel-control .icon-next, 
+.masthead-carousel .carousel-control .icon-prev {
+    margin-top: -24px;
+}
 .logo {
     display: inline;
 }
@@ -108,7 +125,21 @@ blockquote {
     border: none;
     font-size: 12px;
 }
-
+.img-border {
+    display: inline-block;
+    -webkit-box-shadow: 0px 0px 0px 2px #fff, 0px 0px 0px 4px #AAA;
+    -moz-box-shadow: 0px 0px 0px 2px #fff, 0px 0px 0px 4px #AAA;
+    box-shadow: 0px 0px 0px 2px #fff, 0px 0px 0px 4px #AAA;
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+			border-radius: 2px;
+            margin: 10px 0px;
+}
+.img-border img {
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+			border-radius: 2px;
+}
 .form-group ul {
     list-style: none;
     padding: 0;
@@ -130,6 +161,15 @@ ul.default-list {
 }
     ul.default-list li {
         margin: 5px;
+    }
+ul.min-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+    ul.min-list li {
+        padding: 0;
+        margin: 3px 0;
     }
 
 ul.video-thumnails {

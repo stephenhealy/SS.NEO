@@ -2,24 +2,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BannerContent" runat="server">
-<section class="home-section" style="background-color: #111; padding-top: 15px; padding-bottom: 15px; margin-top: 0px; color: #FFF; ">
-
+    <section class="home-section" style="background-color: #111; padding-top: 15px; padding-bottom: 15px; margin-top: 0px; color: #FFF; ">
         <div class="container">
-
-          <div class="row">
-            <div class="col-sm-8">
-              <h3>Don't Forget . . .</h3>
-              <p>Sign up for our email list and stay up to date on all activities and events as they are added.</p>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3>Don't Forget . . .</h3>
+                    <p>Sign up for our email list and stay up to date on all activities and events as they are added.</p>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="#" onclick="return Subscribe()" class="btn btn-default btn-lg">&nbsp;&nbsp;&nbsp;&nbsp;Join Now!&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                </div>
             </div>
-
-            <div class="col-sm-4 text-center">
-              <a href="#" onclick="return Subscribe()" class="btn btn-default btn-lg">&nbsp;&nbsp;&nbsp;&nbsp;Join Now!&nbsp;&nbsp;&nbsp;&nbsp;</a>
-            </div>
-          </div>
-
         </div> <!-- /.container -->
-
-      </section>
+    </section>
     <div class="carousel slide carousel-fade masthead-carousel" id="masthead-carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -53,6 +48,15 @@
                 </ItemTemplate>
             </asp:Repeater>
         </div><!-- /.carousel-inner -->
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#masthead-carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#masthead-carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div><!-- /.masthead-carousel -->
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="BeforeContent" runat="server">
@@ -66,11 +70,89 @@
                         <h1>Welcome to NEO Sports Plant</h1>
                         <h4 style="color: #d74b4b; margin-top: 5px">Formerly Euclid Sports Plant</h4>
                     </div>
-	                <p class="">We are under new ownership and will be making several renovations through the summer to be ready for our grand re-opening in September. We will  continue to remain open all summer during our renovations. We will be running Volleyball Clinics, Camps and Private/Group Lessons. We will also be running Basketball Leagues, Tournaments, Camps, Clinics, Private/Group Lessons & Open Gyms. Court rentals for sports, parties and events are also available year round-  call for availability.</p>
-	                <p class="">As part of our grand re-opening we will be putting in 4 Indoor Sand Volleyball  Courts  to go along with 6 Indoor Volleyball/4 Basketball Courts making  NEO Sports the 1st sports facility in Ohio to offer both Indoor Volleyball &  Indoor Sand Volleyball at one facility.</p>
-	                <p class="semibold">If you have any questions please <a href="<%= master.RelativePath %>/Company/Contact" class="text-primary">contact us</a> at 216-288-6918.</p>
-	                <p class="">We look forward to seeing old faces and meeting new people.</p>
-	                <p class="">Sincerely,<br /><em>NEO Management</em></p>
+	                <p class="">NEO Sports Plant is a Multi-Sports complex in North East Ohio offering a variety of sporting activities and is Northeast Ohio's only Indoor Sand Volleyball and Indoor Volleyball facility. We also offer basketball, indoor bocce, baseball, court rentals, soccer and sports specific performance training.We are committed to providing quality social sports leagues for every skill and   competition level. Our onsite bar and grille is sure to make your playing experience fun. Come check us out!</p>
+
+                    <br class="xs-30">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="img-border">
+                                <img src="img/square/sandvball.gif" alt="Indoor Sand Volleyball" />
+                            </div>
+                            <h4>New Leagues Start in March!</h4>
+                            <ul class="min-list">
+                                <li><a href="Volleyball/IndoorSand/Leagues/Default.aspx">Register for upcoming leagues</a></li>
+                                <li><a href="https://neosportsplant.ezleagues.ezfacility.com/leagues.aspx" target="_blank">View League Schedules</a></li>
+                                <li><a href="Volleyball/IndoorSand/Tournaments/Default.aspx">View Tournament Schedules</a></li>
+                            </ul>
+                            <div style="margin-top: 10px">
+                                <span style="font-weight: 600">Join Us for Open Gym on Sunday, March 12th; 10am - 1pm 2's; 1 - 4pm 4's and 6's; $5 per session</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="img-border">
+                                <img src="img/square/indoorvball.gif" alt="Indoor Volleyball" />
+                            </div>
+                            <h4>New Leagues Start in March!</h4>
+                            <ul class="min-list">
+                                <li><a href="Volleyball/Indoor/Leagues/Default.aspx">Register for upcoming leagues </a></li>
+                                <li><a href="https://neosportsplant.ezleagues.ezfacility.com/leagues.aspx" target="_blank">View League Schedules</a></li>
+                                <li><a href="Volleyball/Indoor/Tournaments/Default.aspx">View Tournament Schedules</a></li>
+                                <li><a href="Volleyball/NEOVC/Default.aspx">NEOVC JO Volleyball Program</a></li>
+                            </ul>
+                            <div style="margin-top: 10px">
+                                <span style="font-weight: 600">Join Us for Sunday Skills Sessions on Sunday, March 12th 1-2pm; $10 drop-in</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="img-border">
+                                <img src="img/square/sportsperform.gif" alt="Sports Performance" />
+                            </div>
+                            <h4>Taking athletes to the next level!</h4>
+                            <p>Get unlimited speed, agility and resistance training for <strong>as low as $7 </strong>per class.</p>
+                            <p>Or sign up for <strong>12 weeks</strong> of performance training for $360.</p>
+                            <p><a href="Performance/Default.aspx">Learn More</a></p>
+                            <p>Download our <a href="SportsPerformanceFlyer_85x11.pdf" target="_blank">Sports Performance Flyer</a></p>
+                        </div>
+                    </div>
+
+                    <br class="xs-30">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="img-border">
+                                <img src="img/square/indoorbocce.gif" alt="Indoor Bocce" />
+                            </div>
+                            <h4>New Leagues Start in March!</h4>
+                            <ul class="min-list">
+                                <li><a href="Bocce/Default.aspx">Register for upcoming leagues</a></li>
+                            </ul>
+                            <div style="margin-top: 10px">
+                                <span style="font-weight: 600">Join Us for Open Gym on Sunday, March 12th; 10am - 1pm 2's; 1 - 4pm 4's and 6's; $5 per session</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="img-border">
+                                <img src="img/square/daycamps.gif" alt="Day Camps" />
+                            </div>
+                            <h4>Register for our Kids Camps!</h4>
+                            <p><span style="font-weight: 600">Sports and Activities Spring Break Day Camp</span> - March 27th - March 31st</p>
+                            <ul class="min-list">
+                                <li><a href="https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=5325&amp;GroupID=1796691">Register Online </a></li>
+                                <li><a href="http://neosportsplant.com/documents/Spring%20Break%20Flyer_lr.pdf" target="_blank">Download our Spring Break Camp Flyer</a></li>
+                            </ul>
+                            <p><span style="font-weight: 600">NEO Summer Camp</span> - May 29th thru August 11th</p>
+                            <ul class="min-list">
+                                <li><a href="http://neosportsplant.com/documents/Day%20Camp%20Flyer_lr.pdf" target="_blank">Download our NEO Summer Camp Flyer</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="img-border">
+                                <img src="img/square/events.gif" alt="Parties & Events" />
+                            </div>
+                            <h4>Book Your Next Party or Event With Us!</h4>
+                            <p>Book your sports specific birthday party, use our sand courts for the kids to play while the adults enjoy our bar and grille, host a fundraiser or reverse raffle.</p>
+                            <p><a href="Events/Host/Default.aspx">Contact Us</a> for more details.</p>
+                        </div>
+                    </div>
                 </div><!-- /.col -->
                 <div class="col-sm-4 col-md-4 col-lg-3 layout-sidebar">
                     <asp:PlaceHolder ID="phFeatured" runat="server" Visible="false">

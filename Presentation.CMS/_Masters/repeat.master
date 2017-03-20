@@ -333,7 +333,12 @@
                 // Stick the filter to side.
                 $('#button-wrapper').scrollToFixed({
                     marginTop: 10,
-                    preFixed: function () { $(this).css({ 'background-color': '#FFFFFF', "width": "600px" }); }
+                    postFixed: function () {
+                        $("#button-wrapper").removeClass("fixed");
+                    },
+                    preFixed: function () {
+                        $("#button-wrapper").addClass("fixed");
+                    }
                 });
 
                 $(".select-basic-single").select2({
