@@ -52,9 +52,9 @@ namespace Presentation.Web._Controls
                 rptUpcoming.DataSource = upcoming;
                 rptUpcoming.DataBind();
                 litUpcoming.Visible = (rptUpcoming.Items.Count == 0);
-                //rptRecent.DataSource = all.Where(o => o.Date < now).OrderByDescending(o => o.Date).ToList().Take(10);
-                //rptRecent.DataBind();
-                //litRecent.Visible = (rptRecent.Items.Count == 0);
+                rptRecent.DataSource = all.Where(o => o.Date < now).OrderByDescending(o => o.Date).ToList().Take(10);
+                rptRecent.DataBind();
+                litRecent.Visible = (rptRecent.Items.Count == 0);
             }
         }
     }
