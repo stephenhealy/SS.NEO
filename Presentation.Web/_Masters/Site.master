@@ -209,6 +209,9 @@
                                     <a href="<%= RelativePath%>/Performance/HallOfFame/"><i class="fa fa-angle-double-right dropdown-icon"></i> Hall of Fame</a>
                                 </li>
                                 <li>
+                                    <a href="<%= RelativePath%>/Performance/Videos/"><i class="fa fa-angle-double-right dropdown-icon"></i> Videos</a>
+                                </li>
+                                <li>
                                     <a href="<%= RelativePath%>/Performance/FAQs/"><i class="fa fa-angle-double-right dropdown-icon"></i> FAQs</a>
                                 </li>
                             </ul>
@@ -235,6 +238,9 @@
                                             <a href="<%= RelativePath%>/Events/Host/"> Host an Event</a>
                                         </li>
                                     </ul>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Facility/Videos/"><i class="fa fa-angle-double-right dropdown-icon"></i> Videos</a>
                                 </li>
                             </ul>
                         </li>
@@ -316,6 +322,9 @@
                         </li>
                         <li>
                             <i class="icon-li fa fa-twitter"></i> <a href="https://twitter.com/neosportsplant" target="_blank">Twitter</a>
+                        </li>
+                        <li>
+                            <i class="icon-li fa fa-youtube-play"></i> <a href="https://www.youtube.com/channel/UCcvIpEbIcIZCR10UMwR6Tog" target="_blank">YouTube</a>
                         </li>
                         <li>
                             <i class="icon-li fa fa-instagram"></i> <a href="https://www.instagram.com/neosportsplant" target="_blank">Instagram</a>

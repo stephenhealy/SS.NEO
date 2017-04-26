@@ -64,6 +64,7 @@
     <Compile Include="Sessions.cs" />
     <Compile Include="Statics.cs" />
     <Compile Include="UserProfile.cs" />
+    <Compile Include="YouTube.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="_DLLs\EntityFramework.dll" />

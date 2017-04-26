@@ -107,6 +107,8 @@
     <Content Include="Daycamp\Default.aspx" />
     <Content Include="Advertise\Default.aspx" />
     <Content Include="Default.bak.aspx" />
+    <Content Include="Facility\Videos\Default.aspx" />
+    <Content Include="Performance\Videos\Default.aspx" />
     <Content Include="Volleyball\Default.aspx" />
     <Content Include="Wellness\Default.aspx" />
     <Content Include="Sponsor.aspx" />
@@ -537,6 +539,20 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Advertise\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facility\Videos\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facility\Videos\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Performance\Videos\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Performance\Videos\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Volleyball\Default.aspx.cs">

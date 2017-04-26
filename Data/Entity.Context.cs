@@ -59,8 +59,8 @@ namespace Data
         public DbSet<Bocce> Bocces { get; set; }
         public DbSet<Sidebar> Sidebars { get; set; }
         public DbSet<Sponsor> Sponsors { get; set; }
-        public DbSet<HallOfFame> HallOfFames { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Volleyball> Volleyballs { get; set; }
+        public DbSet<HallOfFame> HallOfFames { get; set; }
     }
 }

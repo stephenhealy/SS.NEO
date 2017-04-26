@@ -220,6 +220,7 @@
                            "zeroRecords": "Make a choice from the <strong>Navigation Tree</strong> option to the left",
                            "infoEmpty": "No records"
                        },
+                       'pageLength': 100,
                        'paging': true,  // Table pagination
                        'ordering': true,  // Column ordering 
                        'info': true,  // Bottom left status text
