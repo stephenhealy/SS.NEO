@@ -54,7 +54,7 @@
                 <h4>Our Location</h4>
             </div>
             <div class="google-map chart-holder-150" id="googlemaps"></div><br>
-            <a class="btn btn-default btn-block" href="<%= master.RelativePath %>/Contact/">Contact Us!</a>
+            <a class="btn btn-default btn-block" href="<%= master.RelativePath %>/Company/Contact/">Contact Us!</a>
         </div><!-- /.col -->
     </div><!-- /.row -->
 </asp:Content>

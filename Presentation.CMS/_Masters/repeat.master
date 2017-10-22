@@ -198,11 +198,13 @@
            function LoadRecords(query) {
                var index = 0;
                try {
-                   ParentColumn();   // Required to be put in the <footer> section for those with a Parent Column
+                   var ColumnName = ParentColumn();   // Required to be put in the <footer> section for those with a Parent Column
+                   if (ColumnName == null || ColumnName == "")
+                       ColumnName = "Parent";
                    varColumns = [
                      { mData: 'AssetID' },
                      { mData: 'Name' },
-                     { mData: 'Parent' },
+                     { mData: ColumnName },
                      { mData: 'Enabled' },
                      { mData: 'ModifiedBy' },
                      { mData: 'ModifiedOn' }

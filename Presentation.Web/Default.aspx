@@ -2,19 +2,24 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BannerContent" runat="server">
-    <section class="home-section" style="background-color: #111; padding-top: 15px; padding-bottom: 15px; margin-top: 0px; color: #FFF; ">
+<section class="home-section" style="background-color: #111; padding-top: 15px; padding-bottom: 15px; margin-top: 0px; color: #FFF; ">
+
         <div class="container">
-            <div class="row">
-                <div class="col-sm-8">
-                    <h3>Don't Forget . . .</h3>
-                    <p>Sign up for our email list and stay up to date on all activities and events as they are added.</p>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <a href="#" onclick="return Subscribe()" class="btn btn-default btn-lg">&nbsp;&nbsp;&nbsp;&nbsp;Join Now!&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                </div>
+
+          <div class="row">
+            <div class="col-sm-8">
+              <h3>Don't Forget . . .</h3>
+              <p>Sign up for our email list and stay up to date on all activities and events as they are added.</p>
             </div>
+
+            <div class="col-sm-4 text-center">
+              <a href="#" onclick="return Subscribe()" class="btn btn-default btn-lg">&nbsp;&nbsp;&nbsp;&nbsp;Join Now!&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </div>
+          </div>
+
         </div> <!-- /.container -->
-    </section>
+
+      </section>
     <div class="carousel slide carousel-fade masthead-carousel" id="masthead-carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -70,37 +75,38 @@
                         <h1>Welcome to NEO Sports Plant</h1>
                         <h4 style="color: #d74b4b; margin-top: 5px">Formerly Euclid Sports Plant</h4>
                     </div>
-	                <p class="">NEO Sports Plant is a Multi-Sports complex in North East Ohio offering a variety of sporting activities and is Northeast Ohio's only Indoor Sand Volleyball and Indoor Volleyball facility. We also offer basketball, indoor bocce, baseball, court rentals, soccer and sports specific performance training.We are committed to providing quality social sports leagues for every skill and   competition level. Our onsite bar and grille is sure to make your playing experience fun. Come check us out!</p>
-
-                    <br class="xs-30">
+	                <p class="">Located in Northeast  Ohio, the newly renovated NEO Sports Plant is a Multi-Sports complex and sports bar offering a  variety of athletic activities and leagues. We are the only facility in  Northeast Ohio to offer both Indoor Sand Volleyball and Indoor Volleyball.  With 4 indoor sand volleyball courts, spacious indoor deck, adjacent bar, kitchen and 6 indoor volleyball courts/4 basketball courts, we are able to offer something for everyone. We also offer basketball leagues, lessons and clinics, indoor bocce, baseball, court rentals, soccer clinics, ping-pong tournaments and sports specific performance training. Our  mission is to provide enjoyable, quality and affordable sports leagues that  accommodate every skill and competition level. Our onsite bar and grille is  sure to enhance your playing experience fun. Come check us out!</p>
+                    <p class="">&nbsp;</p>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="img-border">
                                 <img src="img/square/sandvball.gif" alt="Indoor Sand Volleyball" />
                             </div>
-                            <h4>New Leagues Start in March!</h4>
+                            <h4>Fall 2017 League Schedules Coming Soon</h4>
                             <ul class="min-list">
-                                <li><a href="Volleyball/IndoorSand/Leagues/Default.aspx">Register for upcoming leagues</a></li>
                                 <li><a href="https://neosportsplant.ezleagues.ezfacility.com/leagues.aspx" target="_blank">View League Schedules</a></li>
                                 <li><a href="Volleyball/IndoorSand/Tournaments/Default.aspx">View Tournament Schedules</a></li>
                             </ul>
                             <div style="margin-top: 10px">
-                                <span style="font-weight: 600">Join Us for Open Gym on Sunday, March 12th; 10am - 1pm 2's; 1 - 4pm 4's and 6's; $5 per session</span>
+                                <p style="font-weight: 600">Join Us Saturday, April 22nd for Co-ed 4's Sand Tournament - $80 - <a href="https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=5325&amp;GroupID=1826400" target="_blank">Register here</a></p>
+                                <p style="font-weight: 600">Developmental Beach Program - 7-9th Grade - Starts May 22 - <a href="http://neosportsplant.com/Volleyball/Clinics/">Learn More</a></p>
+                                <p style="font-weight: 600">Developmental Beach Program - 10-12th Grade - Starts May 23 - <a href="http://neosportsplant.com/Volleyball/Clinics/">Learn More</a></p>
+                                <p style="font-weight: 600">&nbsp;</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="img-border">
                                 <img src="img/square/indoorvball.gif" alt="Indoor Volleyball" />
                             </div>
-                            <h4>New Leagues Start in March!</h4>
+                            <h4>Fall 2017 League Schedules Coming Soon</h4>
                             <ul class="min-list">
-                                <li><a href="Volleyball/Indoor/Leagues/Default.aspx">Register for upcoming leagues </a></li>
                                 <li><a href="https://neosportsplant.ezleagues.ezfacility.com/leagues.aspx" target="_blank">View League Schedules</a></li>
                                 <li><a href="Volleyball/Indoor/Tournaments/Default.aspx">View Tournament Schedules</a></li>
                                 <li><a href="Volleyball/NEOVC/Default.aspx">NEOVC JO Volleyball Program</a></li>
                             </ul>
                             <div style="margin-top: 10px">
-                                <span style="font-weight: 600">Join Us for Sunday Skills Sessions on Sunday, March 12th 1-2pm; $10 drop-in</span>
+                              <p style="font-weight: 600">Join Us for Sunday Skills Sessions on Sunday, March 19th - April 16th 1-2pm; $60 registration fee. <a href="http://neosportsplant.com/Volleyball/Clinics/">More info</a></p>
+                                <p style="font-weight: 600">Youth Summer Volleyball Camps - <a href="http://neosportsplant.com/Volleyball/Clinics/">Learn More</a></p>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -121,12 +127,12 @@
                             <div class="img-border">
                                 <img src="img/square/indoorbocce.gif" alt="Indoor Bocce" />
                             </div>
-                            <h4>New Leagues Start in March!</h4>
-                            <ul class="min-list">
-                                <li><a href="Bocce/Default.aspx">Register for upcoming leagues</a></li>
+                            <h4>NEO Grand Opening - 4 man teams - Saturday, May 20th - $100/team; 8:30a.m.                           </h4>
+                            <ul>
+                              <li><a href="https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=5325&amp;GroupID=1833693" target="_blank">Register for our grand opening tournament on May 20th</a></li>
                             </ul>
                             <div style="margin-top: 10px">
-                                <span style="font-weight: 600">Join Us for Open Gym on Sunday, March 12th; 10am - 1pm 2's; 1 - 4pm 4's and 6's; $5 per session</span>
+                                <span style="font-weight: 600">More information on open Bocce play coming soon</span>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -134,14 +140,9 @@
                                 <img src="img/square/daycamps.gif" alt="Day Camps" />
                             </div>
                             <h4>Register for our Kids Camps!</h4>
-                            <p><span style="font-weight: 600">Sports and Activities Spring Break Day Camp</span> - March 27th - March 31st</p>
-                            <ul class="min-list">
-                                <li><a href="https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=5325&amp;GroupID=1796691">Register Online </a></li>
-                                <li><a href="http://neosportsplant.com/documents/Spring%20Break%20Flyer_lr.pdf" target="_blank">Download our Spring Break Camp Flyer</a></li>
-                            </ul>
                             <p><span style="font-weight: 600">NEO Summer Camp</span> - May 29th thru August 11th</p>
                             <ul class="min-list">
-                                <li><a href="http://neosportsplant.com/documents/Day%20Camp%20Flyer_lr.pdf" target="_blank">Download our NEO Summer Camp Flyer</a></li>
+                              <li><a href="http://neosportsplant.com/documents/Day%20Camp%20Flyer_lr.pdf" target="_blank">Download our NEO Summer Camp Flyer</a></li>
                             </ul>
                         </div>
                         <div class="col-md-4">
@@ -225,25 +226,26 @@
                 </div><!-- /.col -->
                 <div class="col-sm-4">
                     <div class="feature-sm">
-                        <h3 class="feature-sm-label">Basketball Programs & Events</h3>
-                        <p class="feature-sm-content">NEO Sports Plant offers basketball leagues, tournaments, camps, clinics and lessons on our 4 regulation-size basketball courts. Don’t miss out on the fun – join today!</p>
+                        <h3 class="feature-sm-label">Sports Performance</h3>
+                        <p class="feature-sm-content">We are a group of educated Strength &amp; Conditioning coaches dedicated   to take your athletic abilities to the next level.  We don&rsquo;t just train   our athlete&rsquo;s, but educate them on what they are doing, why they are   doing it and how to do it correctly.  Our Strength &amp; Conditioning   coaches also educate athletes how to become motivated and focused inside   and outside the gym, field, and courts to achieve complete wellness. A unique advantage of training at the NEO Sports Plant is the ability to train year round in our 4 sand volleyball courts.</p>
                         <ul class="fa-ul blog-ul">
                             <li>
                                 <i class="fa-li fa fa-chevron-right"></i>
-                                <a href="<%= master.RelativePath %>/Basketball/Leagues">Adult Leagues</a>
+                                <a href="/Performance/About/">About Us</a>
                             </li>
                             <li>
                                 <i class="fa-li fa fa-chevron-right"></i>
-                                <a href="<%= master.RelativePath %>/Basketball/Tournaments">Adult Tournaments</a>
+                                <a href="/Performance/Training/">Performance Training</a>
                             </li>
                             <li style="display: none">
                                 <i class="fa-li fa fa-chevron-right"></i>
                                 <a href="<%= master.RelativePath %>/Basketball/Youth">Youth Programs</a>
                             </li>
-                            <li>
-                                <i class="fa-li fa fa-chevron-right"></i>
-                                <a href="<%= master.RelativePath %>/Players">Player’s Connection</a>
+                            <li> <i class="fa-li fa fa-chevron-right"></i>
+                            <a href="/Performance/FAQs/">FAQ's</a>
                             </li>
+                            <li><i class="fa-li fa fa-chevron-right"></i>
+                            Download our <a href="SportsPerformanceFlyer_85x11.pdf" target="_blank">Sports Performance Flyer</a></li>
                         </ul>
                     </div><!-- /.feature-sm -->
                 </div><!-- /.col -->
@@ -278,4 +280,13 @@
 <asp:Content ID="Content5" ContentPlaceHolderID="AfterContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="ScriptContent" runat="server">
+    <script type="text/javascript">
+    var _mfq = _mfq || [];
+      (function() {
+        var mf = document.createElement("script");
+        mf.type = "text/javascript"; mf.async = true;
+        mf.src = "//cdn.mouseflow.com/projects/2ee6c0a0-9172-441b-854e-8788179f2a0b.js";
+        document.getElementsByTagName("head")[0].appendChild(mf);
+      })();
+    </script>
 </asp:Content>

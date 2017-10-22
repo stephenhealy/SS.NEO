@@ -228,3 +228,12 @@ table.cms-history {
     transform: rotate(360deg);
   }
 }
+.fa-stack {
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+}
+    .fa-stack .stacked {        
+        font-size: 70%;
+        color: #d74b4b;
+    }

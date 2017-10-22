@@ -69,5 +69,15 @@
         <script src="<%= RelativePath %>/js/landing.js"></script>
         <asp:ContentPlaceHolder ID="ScriptContent" runat="server"/>
         <script src="<%= RelativePath %>/js/main.js"></script>
+        <!-- mouseflow -->
+        <script type="text/javascript">
+            window._mfq = window._mfq || [];
+            (function () {
+                var mf = document.createElement("script");
+                mf.type = "text/javascript"; mf.async = true;
+                mf.src = "//cdn.mouseflow.com/projects/2ee6c0a0-9172-441b-854e-8788179f2a0b.js";
+                document.getElementsByTagName("head")[0].appendChild(mf);
+            })();
+        </script>
     </body>
 </html>

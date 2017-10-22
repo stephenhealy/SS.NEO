@@ -130,36 +130,13 @@
                                         </li> 
                                     </ul>
                                 </li>
-                                <li class="dropdown-submenu">
-                                    <a tabindex="-1" href="javascript:void;">
-                                        <i class="fa fa-angle-double-right dropdown-icon "></i> 
-                                        Bocce
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="<%= RelativePath%>/Bocce/">
-                                                Overview
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="<%= RelativePath%>/Bocce/Leagues/">
-                                                Leagues
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="<%= RelativePath%>/Bocce/Tournaments/">
-                                                Tournaments
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">Performance <i class="fa fa-caret-down navbar-caret"></i></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li style="display:none">
-                                    <a href="<%= RelativePath%>/Performance/"><i class="fa fa-angle-double-right dropdown-icon"></i> Overview</a>
+                                <li>
+                                    <a href="<%= RelativePath%>/Performance/Training/"><i class="fa fa-angle-double-right dropdown-icon"></i> Overview</a>
                                 </li>
                                 <li>
                                     <a href="<%= RelativePath%>/Performance/About/"><i class="fa fa-angle-double-right dropdown-icon"></i> About Us</a>
@@ -170,11 +147,6 @@
                                         Strength & Conditioning
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="<%= RelativePath%>/Performance/Training/">
-                                                Training
-                                            </a>
-                                        </li>
                                         <li>
                                             <a href="<%= RelativePath%>/Performance/Training/Resistance/">
                                                 Resistance Training
@@ -214,10 +186,30 @@
                                 <li>
                                     <a href="<%= RelativePath%>/Performance/FAQs/"><i class="fa fa-angle-double-right dropdown-icon"></i> FAQs</a>
                                 </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Performance/Clinics/"><i class="fa fa-angle-double-right dropdown-icon"></i> Clinics</a>
+                                </li>
                             </ul>
                         </li>
-                        <li class="">
-                            <a href="<%= RelativePath%>/Gallery/">Photos</a>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">Bocce <i class="fa fa-caret-down navbar-caret"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="<%= RelativePath%>/Bocce/">
+                                        Overview
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Bocce/Leagues/">
+                                        Leagues
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Bocce/Tournaments/">
+                                        Tournaments
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">Facility <i class="fa fa-caret-down navbar-caret"></i></a>
@@ -241,6 +233,9 @@
                                 </li>
                                 <li>
                                     <a href="<%= RelativePath%>/Facility/Videos/"><i class="fa fa-angle-double-right dropdown-icon"></i> Videos</a>
+                                </li>
+                                <li>
+                                    <a href="<%= RelativePath%>/Gallery/"><i class="fa fa-angle-double-right dropdown-icon"></i> Photos</a>
                                 </li>
                             </ul>
                         </li>
@@ -268,7 +263,7 @@
                                 <li>
                                     <a href="<%= RelativePath%>/Advertise/"><i class="fa fa-angle-double-right dropdown-icon"></i> Advertise</a>
                                 </li>
-                                <li>
+                                <li style="display:none">
                                     <a href="<%= RelativePath%>/Daycamp/"><i class="fa fa-angle-double-right dropdown-icon"></i> Daycamp</a>
                                 </li>
                             </ul>

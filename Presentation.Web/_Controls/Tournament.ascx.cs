@@ -36,7 +36,7 @@ namespace Presentation.Web._Controls
                            }).ToList();
 
                 DateTime now = Statics.DateTimeUTC();
-                var upcoming = all.Where(o => o.Date >= now).OrderBy(o => o.Date).ToList().Take(10);
+                var upcoming = all.Where(o => o.Date >= now).OrderBy(o => o.Date).ToList().Take(15);
                 List<AdminList> jumps = new List<AdminList>();
                 DateTime previous = DateTime.MinValue;
                 foreach (var tournament in upcoming) 

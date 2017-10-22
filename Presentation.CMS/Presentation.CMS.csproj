@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="_Modals\Export.aspx" />
+    <Content Include="_Modals\Album.aspx" />
     <Content Include="_Repeat\Content\HallOfFame.aspx" />
     <Content Include="_Repeat\Content\Blog.aspx" />
     <Content Include="__DLLs\EntityFramework.dll" />
@@ -507,6 +508,13 @@
     </Compile>
     <Compile Include="_Modals\Export.aspx.designer.cs">
       <DependentUpon>Export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_Modals\Album.aspx.cs">
+      <DependentUpon>Album.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Modals\Album.aspx.designer.cs">
+      <DependentUpon>Album.aspx</DependentUpon>
     </Compile>
     <Compile Include="_Modals\Session.aspx.cs">
       <DependentUpon>Session.aspx</DependentUpon>

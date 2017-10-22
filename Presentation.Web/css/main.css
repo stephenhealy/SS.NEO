@@ -301,4 +301,12 @@ ul.leaders {
         opacity: 1;
         left: 0px;
     }
+.sidebar {
+    display: table;
+}
+    .sidebar > div.col-md-6 {
+        display: table-cell;
+        float: none;
+    }
+
 

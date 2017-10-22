@@ -2,8 +2,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Buttons" runat="server">
+    <asp:HyperLink ID="hypImport" runat="server" CssClass="btn btn-primary" Visible="false" Text="<em class='fa fa-download fa-rotate-90'></em> Import Photos" NavigateUrl="javascript:void(0);">
+        <span class="fa-stack">
+            <i class="fa fa-folder fa-stack-1x"></i>
+            <i class="fa fa-plus fa-stack-1x stacked"></i>
+        </span> Import Photos
+    </asp:HyperLink>
+    <asp:LinkButton ID="btnImages" runat="server" CssClass="btn btn-primary" Visible="false" OnClick="btnImages_Click">
+        <span class="fa-stack">
+            <i class="fa fa-folder fa-stack-1x"></i>
+            <i class="fa fa-times fa-stack-1x stacked"></i>
+        </span> Delete Photos
+    </asp:LinkButton>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Parent" runat="server">
+    <th style="width:80px">
+        Photos
+    </th>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="Edit" runat="server">
     <div class="form-group">
@@ -33,4 +48,9 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="ScriptContent" runat="server">
+    <script>
+        function ParentColumn() {
+            return "ParentID";
+        }
+    </script>
 </asp:Content>

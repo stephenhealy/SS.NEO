@@ -90,6 +90,29 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">Help<i class="mainnav-caret"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="http://www.sitesteam.com/documents/SiteSteam-HowToUpload.pdf" target="_blank"><i class="fa fa-image dropdown-icon"></i> How to Upload Images</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.sitesteam.com/documents/POP3 Account Setup.pdf" target="_blank"><i class="fa fa-envelope dropdown-icon"></i> How to Configure Email Addresses</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.sitesteam.com/documents/Gmail - Sending and Receiving.pdf" target="_blank"><i class="fa fa-google dropdown-icon"></i> How to Configure Gmail</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.sitesteam.com/documents/Youtube - embedding playlists.pdf" target="_blank"><i class="fa fa-youtube-play dropdown-icon"></i> How to Embed Youtube</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.sitesteam.com/documents/Copying a Session.pdf" target="_blank"><i class="fa fa-calendar dropdown-icon"></i> How to Copy a Session and Leagues</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.sitesteam.com/documents/Importing Photos into Albums.pdf" target="_blank"><i class="fa fa-camera dropdown-icon"></i> How to Import Photos into Albums</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="dropdown<%= Active("/System/") %> navbar-profile">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
                                 <asp:Image ID="imgAvatar" runat="server" CssClass="navbar-profile-avatar" ImageUrl="~/img/avatar.png" />

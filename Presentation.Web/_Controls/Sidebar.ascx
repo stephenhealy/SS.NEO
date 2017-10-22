@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Sidebar.ascx.cs" Inherits="Presentation.Web._Controls.Sidebar" %>
-<%= this.Vertical ? "<br class=\"xs-30 sm-0\">" : "<br/><div class=\"row\"><div class=\"col-md-6\"><br class=\"xs-30\">" %>
+<%= this.Vertical ? "<br class=\"xs-30 sm-0\">" : "<br/><div class=\"row sidebar\"><div class=\"col-md-6\"><br class=\"xs-30\">" %>
 <div class="heading-block">
     <h4>Photo Gallery</h4>
 </div>

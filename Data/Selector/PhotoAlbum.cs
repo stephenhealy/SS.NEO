@@ -24,6 +24,7 @@ namespace Data
                                      {
                                          AssetID = all.AssetID,
                                          Name = all.Name,
+                                         ParentID = (from photos in db.Photos where photos.Deleted == false && photos.AlbumID == all.AssetID select photos).Count(),
                                          Display = all.Display,
                                          Enabled = all.Enabled,
                                          Deleted = all.Deleted,

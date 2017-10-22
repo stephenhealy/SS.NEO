@@ -14,10 +14,27 @@
     width: 250px; 
     overflow: auto;
 }
+.browser-left {
+    position: absolute; 
+    top: 20px; 
+    bottom: 0px; 
+    left: 10px; 
+    width: 250px; 
+    overflow: auto;
+    border-right: dashed 1px #CCC;
+}
 .browser-top-right {
     position: absolute; 
     top: 0px; 
     height: 100px; 
+    left: 275px; 
+    right: 25px; 
+    overflow: hidden;
+}
+.browser-right {
+    position: absolute; 
+    top: 0px; 
+    bottom: 0px; 
     left: 275px; 
     right: 25px; 
     overflow: hidden;

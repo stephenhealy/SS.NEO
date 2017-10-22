@@ -18,7 +18,7 @@ namespace Presentation.CMS._Repeat.Content
             master.ShowOrder = false;
             master.TreeLevel = 2;   // leave off if not a tree.
             if (!IsPostBack)
-                master.Heading.Text = "PhotoAlbums";
+                master.Heading.Text = "Photo Albums";
             master.LoggingKey = LoggingKeys.PhotoAlbums;
         }
 
@@ -60,6 +60,11 @@ namespace Presentation.CMS._Repeat.Content
                 chkEnabled.Checked = item.Enabled;
                 if (item.Deleted)
                     master.HideSave();
+
+                hypImport.Visible = true;
+                hypImport.Attributes.Add("onclick", "return LoadModal('mainModal', '" + master.RelativePath + "/_Modals/Album.aspx?ID=" + id + "', 'Import Photos: <small>" + item.Name + "</small>');");
+                btnImages.Visible = true;
+                btnImages.OnClientClick = "return Confirm(this, 'Are you sure you want to delete all of the photos (" + master.Selector.Photo(id, false).Count.ToString() + ") in this album?');";
             }
         }
 
@@ -151,6 +156,16 @@ namespace Presentation.CMS._Repeat.Content
         {
             item.Deleted = delete;
             master.SaveChanges(item.AssetID);
+        }
+
+        protected void btnImages_Click(object sender, EventArgs e)
+        {
+            List<Data.Photo> Photos = master.db.Photos.Where(o => o.AlbumID == master.AssetID && o.Deleted == false).ToList();
+            foreach (Data.Photo Photo in Photos)
+                Photo.Deleted = true;
+            master.SaveChanges(master.AssetID);
+            Sessions.Set(Sessions.Saved, "0");
+            Response.Redirect(Request.Path + "?ID=" + master.AssetID);
         }
 
     }
